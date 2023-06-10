@@ -1,34 +1,67 @@
-/* GAME GAME GAME GAME GAME */
-
-.grid{
-	border: solid 1px;
-	width: 325px;
-	margin: 0 auto;
-	margin-top: 50px;
+.avatar{
+  position: absolute;
+  z-index: 2;
+  top: 15%;
 }
 
-.row{
-	display: flex;
+.avatar img{
+  width: 100px;
+  height: 100px;
 }
 
-.section{
-	border: solid 1px;
-	width: 150px;
-	height: 150px;
-	margin: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Creates 5 columns */
+  grid-gap: 0px; /* Adds a 10px gap between grid items */
+  position: absolute;
+  z-index: 2;
+  border: 0.75px solid black;
+  top: 35%;
 }
 
-.section p{
-	margin-top:0px;
-	text-align: center;
+.grid-container div{
+  background-color: #ddd;
+  width: 75px;
+  height: 75px;
+  border: 0.5px solid black;
 }
 
-.section a{
-	text-decoration: none;
+.grid-container p{
+  font-size: 15px;
+  margin: 3px;
+  text-align: left;
+  font-family: arial;
+  top: 0;
+  left: 0;
 }
 
-.section img{
-	width: 100%;
-	height: 80%;
-	margin: 0px;
+#g1-1{
+  background: transparent;
+}
+
+#g1-5{
+  background: transparent;
+}
+
+#g2-2{
+  background: transparent;
+}
+
+#g3-2{
+  background: transparent;
+}
+
+#g3-5{
+  background: transparent;
+}
+
+#g4-2{
+  background-image: url('assets/limbs_icon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#g5-1{
+  background: transparent;
 }
