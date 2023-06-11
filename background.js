@@ -1,8 +1,36 @@
-var mySize;
-let rectWidth = 100;
-let rectHeight = 100;
-let reverse = false; // Flag to indicate if the rotation should be reversed
-let startTime; // Variable to store the starting time
+var divsArray = [];
+var rotateVal = 0;
+
+for (var i = 1; i <= 5; i++) {
+  for (var j = 1; j <= 5; j++) {
+    var divId = 'g' + i + '-' + j;
+    var divElement = document.getElementById(divId);
+    divsArray.push(divElement);
+  }
+}
+
+var notActive = [divsArray[1], divsArray[4], divsArray[6], divsArray[9], divsArray[10], divsArray[11], divsArray[13], divsArray[17], divsArray[18], divsArray[19], divsArray[20], divsArray[23], divsArray[24]];
+var active = [divsArray[0], divsArray[2], divsArray[3], divsArray[5], divsArray[7], divsArray[8], divsArray[12], divsArray[14], divsArray[15], divsArray[16], divsArray[21], divsArray[22]];
+
+//var colors = ['#fc7253', '#fa472f', '#fc6753'];
+var colors = ['#fcff4f', '#fcff36', '#fdff8f', '#ffce47'];
+
+for(let e=0; e<notActive.length; e++){
+  //notActive[e].style.border = "1px solid red";
+
+  notActive[e].addEventListener("click", function() {
+    rotateVal = rotateVal + 90;
+    for(let o=0; o<active.length; o++){
+      active[o].style.border = "1px solid white";
+      var randomIndex = Math.floor(Math.random() * colors.length);
+      var randomString = colors[randomIndex];
+      active[o].style.backgroundColor = randomString;
+      active[o].style.border = "1px solid" + randomString;
+      notActive[e].style.rotate = rotateVal + "deg";
+    }
+  });
+}
+
 
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
@@ -20,8 +48,6 @@ function windowResized() {
 function draw() {
   background(77, 95, 232);
 
-  push();
-  translate(-40, 0);
   rotateX(60);
   noFill();
   blendMode(BLEND);
@@ -32,36 +58,8 @@ function draw() {
     rotate(frameCount / 2);
     stroke(114, 173, 106);
     strokeWeight(8+i);
-    ellipse(0, 0, 50*i, 50*i);
+    ellipse(0, 0, 100*i, 50*i);
     pop();
   }
 
-  if (reverse) {
-    // Reverse the rotation
-    rotate(-frameCount / 100);
-  } else {
-    rotate(frameCount / 100);
-  }
-
-  for (var i = 0; i < 50; i++) {
-    beginShape();
-    for (var j = 0; j < 180; j += 20) {
-      var rad = i * 10;
-      var x = rad * cos(j);
-      var y = rad * sin(j);
-      var z = sin(frameCount * 2 + i * 5) * 50;
-
-      stroke(181, 214, 124);
-      strokeWeight(1);
-      vertex(x, y, z);
-      vertex(-x, y, z);
-    }
-    endShape(CLOSE);
-  }
-  pop();
-
-  // Check if 5 seconds have passed
-  if (millis() - startTime >= 5000) {
-    reverse = true; // Set the reverse flag to true
-  }
 }

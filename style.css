@@ -15,7 +15,8 @@
   grid-gap: 0px; /* Adds a 10px gap between grid items */
   position: absolute;
   z-index: 2;
-  border: 1px solid black;
+  border: 2px solid black;
+  padding: 1px;
   top: 35%;
 }
 
@@ -41,7 +42,7 @@
 }
 
 #g1-2{
-  background: #f5fc88;
+  background: #88c0af;
 }
 
 #g1-3{
@@ -66,13 +67,29 @@
   border: 1.5px solid #e5dc7a;
 }
 
+#g2-1{
+  background-image: url('assets/mindseye_icon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #g2-2{
   background: transparent;
   border: 1.5px solid #26b926;
 }
 
+#g2-3{
+  background: #5878e0;
+  border: 1.5px solid #b7b05d;
+}
+
 #g3-2{
   background: transparent;
+}
+
+#g3-3{
+  background: #e6a681;
 }
 
 #g3-4{
@@ -96,6 +113,10 @@
 
 #g4-4{
   background: #79da52;
+}
+
+#g4-5{
+  background: transparent;
 }
 
 #g5-1{
