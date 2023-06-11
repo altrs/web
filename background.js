@@ -18,13 +18,23 @@ function windowResized() {
 }
 
 function draw() {
-  background(93, 147, 225);
+  background(77, 95, 232);
 
   push();
   translate(-40, 0);
   rotateX(60);
   noFill();
   blendMode(BLEND);
+
+  for(let i = 0; i < 50; i++){
+    push();
+    rotateX(-60);
+    rotate(frameCount / 2);
+    stroke(114, 173, 106);
+    strokeWeight(8+i);
+    ellipse(0, 0, 50*i, 50*i);
+    pop();
+  }
 
   if (reverse) {
     // Reverse the rotation

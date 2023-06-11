@@ -15,7 +15,7 @@
   grid-gap: 0px; /* Adds a 10px gap between grid items */
   position: absolute;
   z-index: 2;
-  border: 0.75px solid black;
+  border: 1px solid black;
   top: 35%;
 }
 
@@ -23,7 +23,8 @@
   background-color: #ddd;
   width: 75px;
   height: 75px;
-  border: 0.5px solid black;
+  border: 1px solid black;
+  right: 0;
 }
 
 .grid-container p{
@@ -39,29 +40,74 @@
   background: transparent;
 }
 
+#g1-2{
+  background: #f5fc88;
+}
+
+#g1-3{
+  background: transparent;
+  background-image: url('assets/digitaldiv_icon.png');
+  background-size: 35px;
+  rotate: -90deg;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#g1-4{
+  background-image: url('assets/envirohypno_icon.png');
+  background-size: 35px;
+  rotate: -90deg;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #g1-5{
   background: transparent;
+  border: 1.5px solid #e5dc7a;
 }
 
 #g2-2{
   background: transparent;
+  border: 1.5px solid #26b926;
 }
 
 #g3-2{
   background: transparent;
 }
 
+#g3-4{
+  background: #8a88c0;
+}
+
 #g3-5{
   background: transparent;
+  background-image: url('assets/about_icon.png');
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #g4-2{
-  background-image: url('assets/limbs_icon.jpg');
+  background-image: url('assets/limbs_icon.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#g4-4{
+  background: #79da52;
+}
+
 #g5-1{
   background: transparent;
 }
+
+#g5-3{
+  background-image: url('assets/traditional_icon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
