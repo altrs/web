@@ -1,3 +1,8 @@
+a{
+  text-decoration: none;
+  color: #1c1b1c;
+}
+
 .avatar{
   position: absolute;
   z-index: 2;
@@ -12,19 +17,19 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* Creates 5 columns */
-  grid-gap: 0px; /* Adds a 10px gap between grid items */
+  grid-gap: 1px; /* Adds a 10px gap between grid items */
   position: absolute;
   z-index: 2;
-  border: 2px solid black;
+  border: 1px solid #1c1b1c;
   padding: 1px;
   top: 35%;
 }
 
 .grid-container div{
-  background-color: #ddd;
+  background-color: #f7f7f7;
   width: 75px;
   height: 75px;
-  border: 1px solid black;
+  border: 1px solid #1c1b1c;
   right: 0;
 }
 
@@ -84,6 +89,14 @@
   border: 1.5px solid #b7b05d;
 }
 
+#g2-4{
+  background: transparent;
+}
+
+#g2-5{
+  background: #7e915c;
+}
+
 #g3-2{
   background: transparent;
 }
@@ -102,6 +115,10 @@
   background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#g4-1{
+  background: #a6bf34;
 }
 
 #g4-2{
@@ -123,6 +140,10 @@
   background: transparent;
 }
 
+#g5-2{
+  background: #c693c4;
+}
+
 #g5-3{
   background-image: url('assets/traditional_icon.png');
   background-size: cover;
@@ -130,5 +151,8 @@
   background-repeat: no-repeat;
 }
 
+#g5-5{
+  background: #af7667;
+}
 
 

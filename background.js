@@ -1,6 +1,8 @@
 var divsArray = [];
 var rotateVal = 0;
 
+var vid;
+
 for (var i = 1; i <= 5; i++) {
   for (var j = 1; j <= 5; j++) {
     var divId = 'g' + i + '-' + j;
@@ -38,6 +40,12 @@ function setup() {
   canvas.style('z-index', '1');
   angleMode(DEGREES);
 
+  vid = createVideo("assets/texture.mp4");
+  vid.size(width, height);
+  vid.loop();
+  vid.hide();
+  vid.volume(0);
+
   startTime = millis(); // Store the starting time
 }
 
@@ -46,20 +54,24 @@ function windowResized() {
 }
 
 function draw() {
-  background(77, 95, 232);
+  // background(77, 95, 232);
 
-  rotateX(60);
-  noFill();
-  blendMode(BLEND);
+  image(vid, 0, 0);
 
-  for(let i = 0; i < 50; i++){
-    push();
-    rotateX(-60);
-    rotate(frameCount / 2);
-    stroke(114, 173, 106);
-    strokeWeight(8+i);
-    ellipse(0, 0, 100*i, 50*i);
-    pop();
-  }
+  // rotateX(60);
+  // noFill();
+  // blendMode(BLEND);
+
+  // for(let i = 0; i < 50; i++){
+  //   push();
+  //   rotateX(-60);
+  //   rotate(frameCount / 2);
+  //   stroke(252, 104, 45);
+  //   strokeWeight(8+i);
+  //   ellipse(0, 0, 100*i, 50*i);
+  //   stroke(114, 173, 106);
+  //   ellipse(1, 1, 100*i, 50*i);
+  //   pop();
+  // }
 
 }
