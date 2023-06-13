@@ -11,7 +11,7 @@ imageIndexes.forEach(i => {
 
   //image
   const image = document.createElement('img');
-  image.src = `/assets/threedee/${i}.png`;
+  image.src = `/assets/${i}.png`;
   image.classList.add('galleryImg');
 
   //title
@@ -25,7 +25,7 @@ imageIndexes.forEach(i => {
 
   container.addEventListener('click', () => {
     popup.style.transform = `translateY(0)`;
-    selectedImage.src = `/assets/threedee/${i}.png`;
+    selectedImage.src = `/assets/${i}.png`;
   });
 
 
