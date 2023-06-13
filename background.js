@@ -23,7 +23,7 @@ for (let e = 0; e < notActive.length; e++) {
       active[o].style.border = "1px solid white";
       active[o].style.backgroundColor = 'transparent';
 
-      active[o].style.rotate = Math.floor(Math.random() * 180) + 'deg';
+      active[o].style.rotate = Math.floor(Math.random() * 20) + 'deg';
       setTimeout(function() {
         active[o].style.rotate = '0deg';
       }, 200);
