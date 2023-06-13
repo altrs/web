@@ -1,42 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html land="en">
 <head>
-  <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 10px;
-    }
-    .grid-item {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>3DImEN</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="grid-container" id="gridContainer"></div>
 
-  <script>
-    // Number of images to display
-    const numberOfImages = 3;
+    <div class="container">
+      <div id="gallery"></div>
+    </div>
 
-    // Reference to the grid container element
-    const gridContainer = document.getElementById('gridContainer');
+    <div id="popup">
+      <img src="" id="selectedImage"/>
+    </div>
 
-    // Generate image URLs and create divs
-    for (let i = 1; i <= numberOfImages; i++) {
-      const imageUrl = `assets/threedee/${i}.png`;
+    <script src="gallery.js"></script>
 
-      // Create a new div element for each image
-      const div = document.createElement('div');
-      div.className = 'grid-item';
-      div.style.backgroundImage = `url('${imageUrl}')`;
-
-      // Add the div to the grid container
-      gridContainer.appendChild(div);
-    }
-  </script>
 </body>
 </html>

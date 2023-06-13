@@ -1,6 +1,19 @@
+/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
+/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
+/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
+
+#back{
+  background: url("assets/texture.gif");
+  background-position: center;
+}
+
 a{
   text-decoration: none;
   color: #1c1b1c;
+}
+
+p{
+  color: white;
 }
 
 .avatar{
@@ -20,17 +33,19 @@ a{
   grid-gap: 1px; /* Adds a 10px gap between grid items */
   position: absolute;
   z-index: 2;
-  border: 1px solid #1c1b1c;
+  border: 1px solid black;
   padding: 1px;
   top: 35%;
+  mixBlendMode: hard-light;
 }
 
 .grid-container div{
   background-color: #f7f7f7;
   width: 75px;
   height: 75px;
-  border: 1px solid #1c1b1c;
+  border: 1px solid black;
   right: 0;
+  mixBlendMode: multiply;
 }
 
 .grid-container p{
@@ -46,6 +61,10 @@ a{
   background: transparent;
 }
 
+#g1-1:hover{
+  rotate: -20deg;
+}
+
 #g1-2{
   background: #88c0af;
 }
@@ -59,6 +78,10 @@ a{
   background-repeat: no-repeat;
 }
 
+#g1-3:hover{
+  rotate: -80deg;
+}
+
 #g1-4{
   background-image: url('assets/envirohypno_icon.png');
   background-size: 35px;
@@ -67,16 +90,25 @@ a{
   background-repeat: no-repeat;
 }
 
+#g1-4:hover{
+  rotate: 80deg;
+}
+
 #g1-5{
   background: transparent;
   border: 1.5px solid #e5dc7a;
 }
 
 #g2-1{
+  background: transparent;
   background-image: url('assets/mindseye_icon.png');
-  background-size: cover;
+  background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#g2-1:hover{
+  rotate: -20deg;
 }
 
 #g2-2{
@@ -89,8 +121,16 @@ a{
   border: 1.5px solid #b7b05d;
 }
 
+#g2-3:hover{
+  rotate: -20deg;
+}
+
 #g2-4{
   background: transparent;
+}
+
+#g2-4:hover{
+  rotate: -20deg;
 }
 
 #g2-5{
@@ -105,8 +145,20 @@ a{
   background: #e6a681;
 }
 
+#g3-3:hover{
+  rotate: -20deg;
+}
+
 #g3-4{
   background: #8a88c0;
+  background-image: url('assets/icon2.png');
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#g2-1:hover{
+  rotate: -20deg;
 }
 
 #g3-5{
@@ -117,8 +169,16 @@ a{
   background-repeat: no-repeat;
 }
 
+#g3-5:hover{
+  rotate: -20deg;
+}
+
 #g4-1{
   background: #a6bf34;
+}
+
+#g4-1:hover{
+  rotate: -20deg;
 }
 
 #g4-2{
@@ -126,6 +186,11 @@ a{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  mixBlendMode: multiply;
+}
+
+#g4-2:hover{
+  rotate: -20deg;
 }
 
 #g4-4{
@@ -144,6 +209,10 @@ a{
   background: #c693c4;
 }
 
+#g5-2:hover{
+  rotate: -20deg;
+}
+
 #g5-3{
   background-image: url('assets/traditional_icon.png');
   background-size: cover;
@@ -151,8 +220,75 @@ a{
   background-repeat: no-repeat;
 }
 
-#g5-5{
-  background: #af7667;
+#g5-3:hover{
+  rotate: -20deg;
 }
+
+#g5-5{
+  background: transparent;
+  background-image: url('assets/icon.png');
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#g2-1:hover{
+  rotate: -20deg;
+}
+
+
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+
+.container {
+  max-width: 1600px;
+  padding: 10%;
+  margin: 0 auto;
+}
+
+.imageContainer{
+  border: 1px solid black;
+  padding: 3px;
+  align-self: start;
+}
+
+#gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+  grid-gap: 30px;
+}
+
+.galleryImg{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  padding: 5px;
+}
+
+#selectedImage{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.text{
+  font-size: 10px;
+}
+
+
 
 
