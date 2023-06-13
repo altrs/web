@@ -4,7 +4,7 @@ const selectedImage = document.getElementById('selectedImage');
 const imageIndexes = [1, 2, 3];
 const selectedIndex = null;
 
-for (let i = 1; i <= imageIndexes.length; i++) {
+for (let i = 0; i <= imageIndexes.length; i++) {
   const index = imageIndexes[i];
 
   // container
