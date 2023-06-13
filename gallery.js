@@ -13,7 +13,7 @@ for (let i = 1; i <= imageIndexes.length; i++) {
 
   // image
   const image = document.createElement('img');
-  image.src = `/assets/threedee/${index}.png`;
+  image.src = `assets/threedee/${index}.png`;
   image.classList.add('galleryImg');
 
   // title
@@ -26,7 +26,7 @@ for (let i = 1; i <= imageIndexes.length; i++) {
 
   container.addEventListener('click', () => {
     popup.style.transform = `translateY(0)`;
-    selectedImage.src = `/assets/threedee/${index}.png`;
+    selectedImage.src = `assets/threedee/${index}.png`;
   });
 
   gallery.appendChild(container);
