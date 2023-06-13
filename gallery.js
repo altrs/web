@@ -1,7 +1,7 @@
 const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');
-const imageIndexes = [0, 1, 2, 3];
+const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const selectedIndex = null;
 
 for (let i = 0; i < imageIndexes.length; i++) {
@@ -13,7 +13,7 @@ for (let i = 0; i < imageIndexes.length; i++) {
 
   // image
   const image = document.createElement('img');
-  if (imageIndex === 1 || imageIndex === 2) {
+  if (imageIndex === 1 || imageIndex === 2 || imageIndex === 4 || imageIndex === 5 || imageIndex === 8) {
     image.src = `assets/threedee/${imageIndex}.gif`;
   } else {
     image.src = `assets/threedee/${imageIndex}.png`;
@@ -32,7 +32,7 @@ for (let i = 0; i < imageIndexes.length; i++) {
   container.addEventListener('click', (function (currentIndex) {
     return function () {
       popup.style.transform = 'translateY(0)';
-      if (currentIndex === 1 || currentIndex === 2) {
+      if (currentIndex === 1 || currentIndex === 2 || imageIndex === 4 || imageIndex === 5 || imageIndex === 8) {
         selectedImage.src = `assets/threedee/${currentIndex}.gif`;
       } else {
         selectedImage.src = `assets/threedee/${currentIndex}.png`;
