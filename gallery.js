@@ -13,10 +13,20 @@ for (let i = 0; i < imageIndexes.length; i++) {
 
   // image
   const image = document.createElement('img');
-  if (imageIndex === 1 || imageIndex === 2 || imageIndex === 4 || imageIndex === 5 || imageIndex === 8) {
+  if (imageIndex === 1 || imageIndex === 2 || imageIndex === 4 || imageIndex === 8) {
     image.src = `assets/threedee/${imageIndex}.gif`;
+    container.appendChild(image);
+  } else if (imageIndex === 5) {
+    image.src = `assets/threedee/${imageIndex}.png`;
+    const linkElement = document.createElement('a');
+    linkElement.href = 'https://youtu.be/k207HXfCz2s';
+    const imgWrapper = document.createElement('div');
+    imgWrapper.appendChild(image);
+    linkElement.appendChild(imgWrapper);
+    container.appendChild(linkElement);
   } else {
     image.src = `assets/threedee/${imageIndex}.png`;
+    container.appendChild(image);
   }
   image.classList.add('galleryImg');
 
@@ -25,14 +35,13 @@ for (let i = 0; i < imageIndexes.length; i++) {
   title.textContent = `${imageIndex}.3DImEN-IMG`;
   title.classList.add('text');
 
-  container.appendChild(image);
   container.appendChild(title);
 
   // Use a closure to capture the current imageIndex value
   container.addEventListener('click', (function (currentIndex) {
     return function () {
       popup.style.transform = 'translateY(0)';
-      if (currentIndex === 1 || currentIndex === 2 || imageIndex === 4 || imageIndex === 5 || imageIndex === 8) {
+      if (currentIndex === 1 || currentIndex === 2 || currentIndex === 4 || currentIndex === 8) {
         selectedImage.src = `assets/threedee/${currentIndex}.gif`;
       } else {
         selectedImage.src = `assets/threedee/${currentIndex}.png`;
@@ -47,4 +56,6 @@ popup.addEventListener('click', () => {
   popup.style.transform = 'translateY(-100%)';
   selectedImage.src = '';
 });
+
+
 
