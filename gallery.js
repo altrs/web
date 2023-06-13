@@ -11,7 +11,7 @@ imageIndexes.forEach(i => {
 
   //image
   const image = document.createElement('img');
-  image.src = 'assets/threedee/3.png';
+  image.src = `/assets/threedee/${i}.png`;
 
   image.classList.add('galleryImg');
 
