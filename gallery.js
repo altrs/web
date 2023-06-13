@@ -13,7 +13,11 @@ for (let i = 0; i < imageIndexes.length; i++) {
 
   // image
   const image = document.createElement('img');
-  image.src = `assets/threedee/${index}.png`;
+  if(i == 2 || i == 3){
+    image.src = `assets/threedee/${index}.gif`;
+  }else{
+    image.src = `assets/threedee/${index}.png`;
+  }
   image.classList.add('galleryImg');
 
   // title
@@ -26,7 +30,11 @@ for (let i = 0; i < imageIndexes.length; i++) {
 
   container.addEventListener('click', () => {
     popup.style.transform = `translateY(0)`;
-    selectedImage.src = `assets/threedee/${index}.png`;
+    if(i == 2 || i == 3){
+      selectedImage.src = `assets/threedee/${index}.gif`;
+    }else{
+      selectedImage.src = `assets/threedee/${index}.png`;
+    }
   });
 
   gallery.appendChild(container);
