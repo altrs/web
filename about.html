@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>me</title>
+  <style>
+
+  #back{
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    max-width: 1600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    margin: 0 auto;
+  }
+
+  .imageContainer {
+    padding: 1px;
+    align-self: start;
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+    grid-gap: 5px;
+  }
+
+  .galleryImg {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    padding: 5px;
+  }
+
+  #selectedImage {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  /*Contacts Popup*/
+
+  .smallPopup {
+    display: none;
+    position: fixed;
+    top: 15%;
+    right: 15%;
+    transform: translate(-50%, -50%);
+    background: #7898cf;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid black;
+    z-index: 10;
+  }
+
+  @media (max-width: 768px) {
+    .smallPopup { 14px;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #7898cf;
+      padding: 20px;
+      border: 1px solid black;
+      z-index: 10;
+    }
+  }
+
+  .smallPopup.active {
+    display: block;
+  }
+
+  </style>
+</head>
+<body id="back">
+
+    <a href="index.html"><img class="home" width="20" height="35" style="margin-left: 30px;margin-top: 30px" src="https://cdn.glitch.global/2c6e8cd8-8e3c-4a11-9eb3-223bdc72ff66/ava3.png?v=1678810899933"/></a>
+
+
+    <div class="container">
+
+      <button style="margin-right: 10px; margin-bottom: 10px">Hello <3 Click Here</button>
+      <button id="openPopup" style="margin-right: 10px">Talk to me</button>
+      <a href="library.html"><button>See my library</button></a>
+
+      <div id="popup2" class="smallPopup">
+        <p>Send me an email! robinhaltman@gmail.com <br>
+          <small style="font-size: 9px;">(Please don't forget the H) (or Instagram dm me @robin.alt)</small></p>
+        <button id="closePopup" style="font-size: 10px; background-color: pink; border: 1px solid black;">CLOSE</button>
+      </div>
+
+      <p style="font-size: 15px; margin-right: 80px;">
+        Creative technologist currently exploring the boundaries between the physical and the digital world often using tactile, found-objects in conjunction with physical computing and code. Current investigations : group consciousness, idiosyncratic perception, the mundane, technology in relation to the human body/mind, and the overarching tensions between all of these realities. I am inspired by nature, the mind, the overlooked, and the things that are not often considered forms of ‘art,’ but are art nonetheless. Materializations: explorative digital-interaction, electronic sculptures, simulation technology, and generative visuals and sound. The ultimate goal is to shed constricting and burdening labels imposed upon humans, objects and concepts alike, enabling individuals to tap into a state of impartial existence – ultimately cultivating a sense of deep compassion for our surrounding environment.
+        <br><br>
+      </p>
+
+
+      <div id="gallery"></div>
+    </div>
+
+    <div id="popup">
+      <img src="" id="selectedImage"/>
+    </div>
+
+    <br><br><br><br><br>
+
+    <script type="text/javascript">
+    
+    const gallery = document.getElementById('gallery');
+    const popup = document.getElementById('popup');
+    const selectedImage = document.getElementById('selectedImage');
+    const selectedIndex = null;
+    const imageIndexes = [];
+
+    const openButton = document.getElementById('openPopup');
+    const closeButton = document.getElementById('closePopup');
+    const popup2 = document.getElementById('popup2');
+
+    for(let h=0; h<127; h++){
+      imageIndexes[h] = h;
+    }
+
+    for (let i = 126; i >= 0; i--) {
+      const imageIndex = imageIndexes[i];
+
+      // container
+      const container = document.createElement('div');
+      container.classList.add('imageContainer');
+
+      // image
+      const image = document.createElement('img');
+      image.src = `assets/insta/${imageIndex}.jpg`;
+      container.appendChild(image);
+      image.classList.add('galleryImg');
+
+      // Use a closure to capture the current imageIndex value
+      container.addEventListener('click', (function (currentIndex) {
+        return function () {
+          popup.style.transform = 'translateY(0)';
+          selectedImage.src = `assets/insta/${currentIndex}.jpg`;
+        };
+      })(imageIndex));
+
+      gallery.appendChild(container);
+    }
+
+    popup.addEventListener('click', () => {
+      popup.style.transform = 'translateY(-100%)';
+      selectedImage.src = '';
+    });
+
+    //CONTACT POPUP
+
+    openButton.addEventListener('click', function() {
+      popup2.classList.add('active');
+    });
+
+    closeButton.addEventListener('click', function() {
+      popup2.classList.remove('active');
+    });
+
+
+  </script>
+
+</body>
+</html>

@@ -19,6 +19,7 @@ for (let i = 0; i < imageIndexes.length; i++) {
   } else if (imageIndex === 5) {
     image.src = `assets/threedee/${imageIndex}.png`;
     const linkElement = document.createElement('a');
+    linkElement.target = '_blank';
     linkElement.href = 'https://youtu.be/k207HXfCz2s';
     const imgWrapper = document.createElement('div');
     imgWrapper.appendChild(image);
@@ -43,7 +44,10 @@ for (let i = 0; i < imageIndexes.length; i++) {
       popup.style.transform = 'translateY(0)';
       if (currentIndex === 1 || currentIndex === 2 || currentIndex === 4 || currentIndex === 8) {
         selectedImage.src = `assets/threedee/${currentIndex}.gif`;
-      } else {
+      }else if(currentIndex === 5){
+        popup.style.transform = 'translateY(-100%)';
+      } 
+      else {
         selectedImage.src = `assets/threedee/${currentIndex}.png`;
       }
     };

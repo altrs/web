@@ -12,8 +12,8 @@ for (var i = 1; i <= 5; i++) {
 var notActive = [divsArray[1], divsArray[4], divsArray[6], divsArray[9], divsArray[10], divsArray[11], divsArray[13], divsArray[17], divsArray[18], divsArray[19], divsArray[20], divsArray[23], divsArray[24]];
 var active = [divsArray[0], divsArray[2], divsArray[3], divsArray[5], divsArray[7], divsArray[8], divsArray[12], divsArray[14], divsArray[15], divsArray[16], divsArray[21], divsArray[22]];
 
-var colors2 = ['#51f542', '#7ad672', '#729c6e', '#729c6e'];
-var colors = ['#fcff4f', '#fcff36', '#fdff8f', '#ffce47'];
+var colors2 = ['#51f542', '#7ad672', '#729c6e', '#729c6e', '#b8f252', '#35f0b4']; //greens
+var colors = ['#fcff4f', '#fcff36', '#fdff8f', '#ffce47', '#83cc06', '#d6d263']; //yellows
 
 for (let e = 0; e < notActive.length; e++) {
   notActive[e].addEventListener("click", function() {

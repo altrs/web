@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Stagnant</title>
+  <style>
+
+  .container {
+    max-width: 1600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    margin: 0 auto;
+  }
+
+  .imageContainer {
+    border: 1px solid black;
+    padding: 3px;
+    align-self: start;
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 90px));
+    grid-gap: 20px;
+  }
+
+  .galleryImg {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    padding: 5px;
+  }
+
+  #selectedImage {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+    <a href="index.html"><img class="home" width="20" height="35" style="margin-left: 30px;margin-top: 30px" src="https://cdn.glitch.global/2c6e8cd8-8e3c-4a11-9eb3-223bdc72ff66/ava3.png?v=1678810899933"/></a>
+
+
+    <div class="container">
+      <div id="gallery"></div>
+    </div>
+
+    <div id="popup">
+      <img src="" id="selectedImage"/>
+    </div>
+
+    <script type="text/javascript">
+    
+    const gallery = document.getElementById('gallery');
+    const popup = document.getElementById('popup');
+    const selectedImage = document.getElementById('selectedImage');
+    const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    const selectedIndex = null;
+
+    for (let i = 0; i < imageIndexes.length; i++) {
+      const imageIndex = imageIndexes[i];
+
+      // container
+      const container = document.createElement('div');
+      container.classList.add('imageContainer');
+
+      // image
+      const image = document.createElement('img');
+      if (imageIndex === 9) {
+        image.src = `assets/trad/${imageIndex}.png`;
+        const linkElement = document.createElement('a');
+        linkElement.target = '_blank';
+        linkElement.href = 'https://youtu.be/6qokXflVhyks';
+        const imgWrapper = document.createElement('div');
+        imgWrapper.appendChild(image);
+        linkElement.appendChild(imgWrapper);
+        container.appendChild(linkElement);
+      }else if(imageIndex === 3){
+        image.src = `assets/trad/${imageIndex}.png`;
+        const linkElement = document.createElement('a');
+        linkElement.target = '_blank';
+        linkElement.href = 'https://youtu.be/u3qapHRcDyI';
+        const imgWrapper = document.createElement('div');
+        imgWrapper.appendChild(image);
+        linkElement.appendChild(imgWrapper);
+        container.appendChild(linkElement);
+      }else if(imageIndex === 11){
+        image.src = `assets/trad/${imageIndex}.png`;
+        const linkElement = document.createElement('a');
+        linkElement.target = '_blank';
+        linkElement.href = 'https://youtu.be/Ldq6SKOvtDI';
+        const imgWrapper = document.createElement('div');
+        imgWrapper.appendChild(image);
+        linkElement.appendChild(imgWrapper);
+        container.appendChild(linkElement);
+      }else{
+        image.src = `assets/trad/${imageIndex}.png`;
+        container.appendChild(image);
+      }
+      image.classList.add('galleryImg');
+
+      // title
+      const title = document.createElement('p');
+      title.textContent = `${imageIndex}.STAGN-img`;
+      title.classList.add('text');
+
+      container.appendChild(title);
+
+      // Use a closure to capture the current imageIndex value
+      container.addEventListener('click', (function (currentIndex) {
+        return function () {
+          popup.style.transform = 'translateY(0)';
+          if(currentIndex === 9 || currentIndex === 3 || currentIndex === 11){
+            popup.style.transform = 'translateY(-100%)';
+          } else{
+            selectedImage.src = `assets/trad/${currentIndex}.png`;
+          }
+        };
+      })(imageIndex));
+
+      gallery.appendChild(container);
+    }
+
+    popup.addEventListener('click', () => {
+      popup.style.transform = 'translateY(-100%)';
+      selectedImage.src = '';
+    });
+
+
+  </script>
+
+</body>
+</html>
