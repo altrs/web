@@ -10,6 +10,7 @@
 
   #back{
     background-color: #f2f2f2;
+    font-size: 15px;
   }
 
   .container {
@@ -27,7 +28,7 @@
 
   #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 150px));
     grid-gap: 5px;
   }
 
@@ -58,7 +59,6 @@
   }
 
   .text {
-    font-size: 10px;
     margin-top: 3px;
     margin-bottom: 3px;
   }
@@ -78,8 +78,8 @@
     z-index: 10;
   }
 
-  @media (max-width: 768px) {
-    .smallPopup { 14px;
+  @media (max-width: 800px) {
+    .smallPopup {
       display: none;
       position: fixed;
       top: 50%;
@@ -89,6 +89,9 @@
       padding: 20px;
       border: 1px solid black;
       z-index: 10;
+    }
+    .back{
+    font-size: 5px;
     }
   }
 
@@ -116,7 +119,7 @@
         <button id="closePopup" style="font-size: 10px; background-color: pink; border: 1px solid black;">CLOSE</button>
       </div>
 
-      <div style="font-size: 15px; margin-right: 80px;">
+      <div style="margin-right: 80px;">
         <span id="me1">Creative technologist currently exploring the boundaries between the physical and the digital world often using tactile, found-objects in conjunction with physical computing and code.</span>
 
         <span id="me2">Current investigations : group consciousness, idiosyncratic perception, the mundane, technology in relation to the human body/mind, and the overarching tensions between all of these realities.</span>
