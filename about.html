@@ -105,9 +105,10 @@
 
     <div class="container">
 
-      <button style="margin-right: 10px; margin-bottom: 10px">Hello <3 Click Here</button>
+      <button id="dice" style="margin-right: 10px; margin-bottom: 10px">Hello <3 Click Here</button>
       <button id="openPopup" style="margin-right: 10px">Talk to me</button>
       <a href="library.html"><button>See my library</button></a>
+      <br><br>
 
       <div id="popup2" class="smallPopup">
         <p>Send me an email! robinhaltman@gmail.com <br>
@@ -115,10 +116,18 @@
         <button id="closePopup" style="font-size: 10px; background-color: pink; border: 1px solid black;">CLOSE</button>
       </div>
 
-      <p style="font-size: 15px; margin-right: 80px;">
-        Creative technologist currently exploring the boundaries between the physical and the digital world often using tactile, found-objects in conjunction with physical computing and code. Current investigations : group consciousness, idiosyncratic perception, the mundane, technology in relation to the human body/mind, and the overarching tensions between all of these realities. I am inspired by nature, the mind, the overlooked, and the things that are not often considered forms of ‘art,’ but are art nonetheless. Materializations: explorative digital-interaction, electronic sculptures, simulation technology, and generative visuals and sound. The ultimate goal is to shed constricting and burdening labels imposed upon humans, objects and concepts alike, enabling individuals to tap into a state of impartial existence – ultimately cultivating a sense of deep compassion for our surrounding environment.
-        <br><br>
-      </p>
+      <div style="font-size: 15px; margin-right: 80px;">
+        <span id="me1">Creative technologist currently exploring the boundaries between the physical and the digital world often using tactile, found-objects in conjunction with physical computing and code.</span>
+
+        <span id="me2">Current investigations : group consciousness, idiosyncratic perception, the mundane, technology in relation to the human body/mind, and the overarching tensions between all of these realities.</span>
+
+        <span id="me3">I am inspired by nature, the mind, the overlooked, and the things that are not often considered forms of ‘art,’ but are art nonetheless.</span>
+
+        <span id="me4">Materializations: explorative digital-interaction, electronic sculptures, simulation technology, and generative visuals and sound.</span>
+
+        <span id="me5">The ultimate goal is to shed constricting and burdening labels imposed upon humans, objects and concepts alike, enabling individuals to tap into a state of impartial existence – ultimately cultivating a sense of deep compassion for our surrounding environment.</span>
+        <br><br><br>
+      </div>
 
 
       <div id="gallery"></div>
@@ -159,7 +168,6 @@
       container.appendChild(image);
       image.classList.add('galleryImg');
 
-      // Use a closure to capture the current imageIndex value
       container.addEventListener('click', (function (currentIndex) {
         return function () {
           popup.style.transform = 'translateY(0)';
@@ -175,8 +183,7 @@
       selectedImage.src = '';
     });
 
-    //CONTACT POPUP
-
+    //CONTACT POPUP CONTACT POPUP CONTACT POPUP
     openButton.addEventListener('click', function() {
       popup2.classList.add('active');
     });
@@ -184,6 +191,49 @@
     closeButton.addEventListener('click', function() {
       popup2.classList.remove('active');
     });
+
+    //ABOUT ME TEXT EFFECTS ABOUT ME TEXT EFFECTS
+    const t1 = document.getElementById('me1');
+    const t2 = document.getElementById('me2');
+    const t3 = document.getElementById('me3');
+    const t4 = document.getElementById('me4');
+    const t5 = document.getElementById('me5');
+    const diceButton = document.getElementById('dice');
+    let val = 0;
+    let randomLine = '';
+    const textDocumentURL = 'assets/about.txt';
+
+    diceButton.addEventListener('click', async function(){
+
+      const response = await fetch(textDocumentURL);
+      const text = await response.text();
+      const lines = text.split('\n');
+      const randomIndices = getRandomIndices(lines.length, 3);
+
+      val = Math.floor(Math.random() * 5) + 1;
+      for(let y = 1; y<=5; y++){ 
+        if(val === y){
+          let path = eval('t' + y);
+          path.textContent = lines[randomIndices[0]] + lines[randomIndices[1]] + lines[randomIndices[2]];
+        }
+      }
+
+    })
+
+
+    function getRandomIndices(max, count) {
+      const indices = [];
+      while (indices.length < count) {
+        const randomIndex = Math.floor(Math.random() * max);
+        if (!indices.includes(randomIndex)) {
+          indices.push(randomIndex);
+        }
+      }
+      return indices;
+    }
+
+
+
 
 
   </script>

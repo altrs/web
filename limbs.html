@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <style>
+
+      .back {
+        margin: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: arial;
+        padding: 30px;
+      }
+
+      .element {
+        margin-bottom: 20px;
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blink-rotate {
+        animation: blinkRotate 2s infinite;
+      }
+
+      @keyframes blinkRotate {
+        0%, 33% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+        34%, 64% {
+          opacity: 0;
+        }
+        65%, 100%{
+          transform: rotate(180deg);
+        }
+      }
+
+      .scrollingText {
+        position: absolute;
+        display: block;
+        width: 750px;
+        height: 140px;
+        overflow: hidden;
+        z-index: 5;
+      }
+      .marquee {
+          position: absolute;
+          display: block;
+          margin: auto auto;
+          white-space: nowrap;
+          overflow: hidden;
+          min-width: 100%;
+          height: 100%;
+      }
+      .marquee span {
+          display: inline-block;
+          padding-left: 20%;
+          text-align: center;
+          white-space: nowrap;
+          min-width: 100%;
+          height: 100%;
+          line-height: 140px;
+          font-size: 25px;
+          animation: marquee 20s linear infinite;
+      }
+      @keyframes marquee {
+          0% {
+              transform: translate(0, 0);
+          }
+          100% {
+              transform: translate(-100%, 0);
+          }
+      }
+
+      @media (max-width: 800px) {
+        .back {
+          margin: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-family: arial;
+          padding: 10px;
+        }
+        h1 {
+          font-size: 10px; /* Adjust the font size for smaller screens using em units */
+        }
+
+        .scrollingText {
+          position: absolute;
+          display: block;
+          width: 200px;
+          height: 140px;
+          overflow: hidden;
+          z-index: 5;
+        }
+
+        .marquee span {
+          display: inline-block;
+          padding-left: 100%;
+          text-align: center;
+          white-space: nowrap;
+          min-width: 100%;
+          height: 100%;
+          line-height: 120px;
+          font-size: 10px;
+          animation: marquee 10s linear infinite;
+       }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <a href="index.html"><img class="home" width="20" height="35" style="margin-left: 30px;margin-top: 30px" src="https://cdn.glitch.global/2c6e8cd8-8e3c-4a11-9eb3-223bdc72ff66/ava3.png?v=1678810899933"/></a>
+
+    <div class="back">
+
+    <h1>a brain burst limbs</h1>
+
+    <p></p>
+
+    <img src="assets/limbs/2.jpg" class="element"/>
+
+    <div class="element" style="display: flex;align-items: center;">
+      <div class="scrollingText">
+        <div class="marquee"><span>DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="marquee"><span>DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST DOCTOR KNOWS BEST&nbsp;&nbsp;&nbsp;</span></div>
+      </div>
+      <img src="assets/limbs/hands.png" style="z-index: 3;" class="blink-rotate element"/>
+    </div>
+
+    <iframe width="70%" height="315" src="https://www.youtube.com/embed/xBPdswIbQUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <br><br>
+
+    <img src="assets/limbs/3.gif" class="element"/>
+
+    <br><br>
+
+    <p style="width: 70%; font-size: 15px;">
+      'A brain bursts limbs' is an interactive piece in which a computer asks the user for medical attention. As users digitally wade their way through the computer’s requests, they are presented with a proposed simulation of the cyclic dependency between oneself and technology. Through this experience, both the biological and technological nature of an ailment can be considered as body mimics machine and machine mimics body. Here, the distortion of humans lies in the reflective and imitative characteristics of technology. As the borders of technology continue to be blurred, infections, illnesses and diseases within our physical space unremittingly seep into the digital space as well.
+
+      <br><br>
+
+      Exhibited in PixelMouth's CYBORG//HYPERMEAT @ Grace Exhibition Space, NYC. 2022.
+
+      <br><br>
+
+      Created with Proccessing, Arduino, Raspberry Pi, electronic components, plaster and found objects - 2022
+
+      <br><br><br><br>
+
+      <img src="https://cdn.glitch.global/90c631c3-474d-4ef3-a140-0367470ae1d9/0.png?v=1676751114147"/>
+
+      <img src="https://cdn.glitch.global/90c631c3-474d-4ef3-a140-0367470ae1d9/phase3_2.jpg?v=1676751152432"/>
+
+      <img src="https://cdn.glitch.global/90c631c3-474d-4ef3-a140-0367470ae1d9/phase1_virus1_7.jpg?v=1676751173236"/>
+
+      <img src="https://cdn.glitch.global/90c631c3-474d-4ef3-a140-0367470ae1d9/phase2_part3_14.jpg?v=1676751262696"/>
+
+      <br><br><br>
+
+      <img style="width:100%" src="https://cdn.glitch.global/90c631c3-474d-4ef3-a140-0367470ae1d9/A%20brain%20bursts%20limbs_2023-02-19_03-03-32.png?v=1676775834726"/>
+
+
+    </p>
+
+  </div>
+
+  </body>
+</html>

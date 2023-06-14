@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <!--<link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+    <style>
+
+      a{
+        color: black;
+      }
+      #body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-gap: 5px;
+        max-width: 1100px;
+      }
+
+      .grid-item {
+        position: relative;
+        width: 50px;
+        height: 60px;
+        background-color: white;
+        overflow: hidden;
+        align-self: start;
+      }
+
+      .grid-item:hover,
+      .grid-item:focus {
+        width: 200px; /* Adjust the width to expand to the right */
+        z-index: 1;
+        border: 1px solid black;
+      }
+
+      .grid-item .grid-item-content {
+        display: none;
+      }
+
+      .grid-item.expanded .grid-item-content {
+        padding: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a href="index.html"><img class="home" width="20" height="35" style="margin-left: 30px;margin-top: 30px" src="https://cdn.glitch.global/2c6e8cd8-8e3c-4a11-9eb3-223bdc72ff66/ava3.png?v=1678810899933"/></a>
+
+    <div id="body">
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://drive.google.com/file/d/1Z-kjCk68D6LlS7qtZ7xwO5NBlaMGEsij/view">This is Not my
+Beautiful House</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="http://www.ursulakleguinarchive.com/Note-Technology.html">A Rant About 'Technology'</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="http://www.evidenceoftimetravel.com/">Evidence of Time Travel</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://youtu.be/IvgYh5S0U7k">Oriental Salt</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://youtu.be/JMkrrjKf5AE">Head Transplants?</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://youtu.be/wO61D9x6lNY">Outside In</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://aliceyuanzhang.com/decentralization.html">Unpacking the Myth of Web3</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://store.steampowered.com/app/397740/Hylics/">Hylics</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://disnovation.org/shanzhai.php">Shanzhai Archeology</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://open.spotify.com/album/7HBbA8sdlmh5y96GtlsfiI?si=2l82qUSGTe-Nhw_E30M7Wg">No Input Mixing Board</a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <a href="https://pudding.cool/2018/02/waveforms/">Waveforms :)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const gridItems = document.querySelectorAll('.grid-item');
+
+      gridItems.forEach((gridItem) => {
+        const img = document.createElement('img');
+        img.src = 'assets/star.png';
+        img.style.width = '100%';
+        gridItem.appendChild(img);
+
+        gridItem.addEventListener('mouseenter', function() {
+          this.classList.add('expanded');
+          this.querySelector('.grid-item-content').style.display = 'block';
+          img.style.display = 'none';
+        });
+
+        gridItem.addEventListener('mouseleave', function() {
+          this.classList.remove('expanded');
+          this.querySelector('.grid-item-content').style.display = 'none';
+          img.style.display = 'block';
+        });
+      });
+    </script>
+  </body>
+</html>
+
