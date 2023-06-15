@@ -28,13 +28,13 @@
 
   #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 150px));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 100px));
     grid-gap: 5px;
   }
 
   .galleryImg {
     width: 100%;
-    height: 150px;
+    height: 100px;
     position: relative;
     cursor: pointer;
   }
@@ -90,10 +90,15 @@
       border: 1px solid black;
       z-index: 10;
     }
-    .back{
-    font-size: 5px;
+    .sentences{
+      margin-right: 10px;
+      font-size: 11px;
     }
   }
+
+  .sentences{
+      style="margin-right: 80px;"
+    }
 
   .smallPopup.active {
     display: block;
@@ -119,7 +124,7 @@
         <button id="closePopup" style="font-size: 10px; background-color: pink; border: 1px solid black;">CLOSE</button>
       </div>
 
-      <div style="margin-right: 80px;">
+      <div class="sentences">
         <span id="me1">Creative technologist currently exploring the boundaries between the physical and the digital world often using tactile, found-objects in conjunction with physical computing and code.</span>
 
         <span id="me2">Current investigations : group consciousness, idiosyncratic perception, the mundane, technology in relation to the human body/mind, and the overarching tensions between all of these realities.</span>
@@ -218,6 +223,7 @@
         if(val === y){
           let path = eval('t' + y);
           path.textContent = lines[randomIndices[0]] + lines[randomIndices[1]] + lines[randomIndices[2]];
+          path.style.fontStyle = "italic";
         }
       }
 
