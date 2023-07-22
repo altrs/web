@@ -147,7 +147,7 @@
         <br><br><br>
       </div>
 
-      <p>last update: 07.05.2023 7:30pm :)</p>
+      <p>last update: 07.22.2023 10:47am :)</p>
 
 
       <div id="gallery"></div>
@@ -171,11 +171,11 @@
     const closeButton = document.getElementById('closePopup');
     const popup2 = document.getElementById('popup2');
 
-    for(let h=0; h<119; h++){
+    for(let h=0; h<154; h++){
       imageIndexes[h] = h;
     }
 
-    for (let i = 118; i >= 0; i--) {
+    for (let i = 153; i >= 0; i--) {
       const imageIndex = imageIndexes[i];
 
       // container
@@ -229,6 +229,7 @@
       const text = await response.text();
       const lines = text.split('\n');
       const randomIndices = getRandomIndices(lines.length, 3);
+      diceButton.textContent = 'Keep clicking!';
 
       val = Math.floor(Math.random() * 5) + 1;
       for(let y = 1; y<=5; y++){ 
