@@ -1,7 +1,7 @@
 const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');
-const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 const selectedIndex = null;
 
 for (let i = 0; i < imageIndexes.length; i++) {
@@ -21,6 +21,15 @@ for (let i = 0; i < imageIndexes.length; i++) {
     const linkElement = document.createElement('a');
     linkElement.target = '_blank';
     linkElement.href = 'https://youtu.be/k207HXfCz2s';
+    const imgWrapper = document.createElement('div');
+    imgWrapper.appendChild(image);
+    linkElement.appendChild(imgWrapper);
+    container.appendChild(linkElement);
+  } else if (imageIndex === 11) {
+    image.src = `assets/threedee/${imageIndex}.png`;
+    const linkElement = document.createElement('a');
+    linkElement.target = '_blank';
+    linkElement.href = 'https://www.youtube.com/watch?v=pOsCTS3vy-I';
     const imgWrapper = document.createElement('div');
     imgWrapper.appendChild(image);
     linkElement.appendChild(imgWrapper);
