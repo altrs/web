@@ -29,7 +29,7 @@ for (let i = 0; i < imageIndexes.length; i++) {
     image.src = `assets/threedee/${imageIndex}.png`;
     const linkElement = document.createElement('a');
     linkElement.target = '_blank';
-    linkElement.href = 'https://www.youtube.com/watch?v=pOsCTS3vy-I';
+    linkElement.href = 'https://www.altrs.wiki/port/jungle.html';
     const imgWrapper = document.createElement('div');
     imgWrapper.appendChild(image);
     linkElement.appendChild(imgWrapper);
