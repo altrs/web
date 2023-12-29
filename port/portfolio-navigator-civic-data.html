@@ -17,14 +17,6 @@
   <title>Navigator</title>
   <style>
 
-    /*@media (max-width: 800px) {
-      body{
-        padding: 5%;
-        padding-left: 0%;
-        padding-right: 0%;
-      }
-    }*/
-
     body{
       font-family: "Arial";
       padding: 5%;
@@ -116,7 +108,7 @@
     .detail{
       text-align: right;
       position: absolute;
-      bottom: 10%;
+      bottom: 12%;
       right: 5px;
     }
 
@@ -138,12 +130,68 @@
       background-color: yellow;
     }
 
+    @media only screen and (max-width: 768px) {
+      body {
+        padding: 5%;
+        padding-left: 0%;
+        padding-right: 0%;
+        font-size: 1.5vw;
+      }
+
+      .inner-title{
+        font-size: 3vw;
+      }
+
+      .title2{
+        top: 45%;
+        font-size: 1.5vw;
+      }
+
+      .box {
+        position: relative;
+        border: 1px solid;
+        margin-bottom: 20px;
+        height: 140;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        padding: 5%;
+        padding-left: 0%;
+        padding-right: 0%;
+        font-size: 1.5vw;
+      }
+
+      .inner-title{
+        font-size: 3vw;
+      }
+
+      .title2{
+        top: 45%;
+        font-size: 1.5vw;
+      }
+
+      .box {
+        position: relative;
+        border: 1px solid;
+        margin-bottom: 20px;
+        height: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <div class="title" onmouseenter="highlight()" onmouseleave="unhighlight()">
-    <h1 id="highlight-title">ROBIN ALTMAN<br><i>CREATIVE TECHNOLOGY PORTFOLIO</i></h1>
+    <h1 id="highlight-title"> ROBIN ALTMAN <br><i> CREATIVE TECHNOLOGY PORTFOLIO </i> </h1>
   </div>
 
   <div class="menu" onmouseenter="unhighlight()">
