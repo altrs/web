@@ -61,6 +61,7 @@
       width: 100%;
       margin: 0 auto;
       margin-top: 10px;
+      margin-bottom: 50px;
     }
 
     .column {
@@ -128,17 +129,26 @@
       font-weight: 100;
     }
 
+    mark{
+      background-color: black;
+      color: white;
+    }
+
+    .weblink:hover{
+      background-color: yellow;
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="title">
-    <h1>ROBIN ALTMAN <br><i>CREATIVE TECHNOLOGY PORTFOLIO</i></h1>
+  <div class="title" onmouseenter="highlight()" onmouseleave="unhighlight()">
+    <h1 id="highlight-title">ROBIN ALTMAN<br><i>CREATIVE TECHNOLOGY PORTFOLIO</i></h1>
   </div>
 
-  <div class="menu">
-    <a href="https://www.altrs.wiki/"><p style="justify-content: left; text-align: left;">1.0 LINK TO MAIN SITE</p></a>
-    <a href="https://www.altrs.wiki/port/resume"><p style="justify-content: right; text-align: right;">2.0 LINK TO RESUME</p></a>
+  <div class="menu" onmouseenter="unhighlight()">
+    <a href="https://www.altrs.wiki/"><p class="weblink" style="justify-content: left; text-align: left;">1.0 LINK TO MAIN SITE</p></a>
+    <a href="https://www.altrs.wiki/port/resume.html"><p class="weblink" style="justify-content: right; text-align: right;">2.0 LINK TO RESUME</p></a>
   </div>
 
   <div class="container">
@@ -146,7 +156,7 @@
     <div class="column">
 
       <a href="https://www.altrs.wiki/port/jungle.html">
-      <div class="box" style="background-color:#db9898; color: #6af1d6; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#db9898', '#6af1d6')" style="background-color:#db9898; color: #6af1d6; border-color: black;">
         <div class="box-text">
           <p class="date">2023</p>
           <p class="inner-title">'JUNGLE' CHANPAN</p>
@@ -157,7 +167,7 @@
       </a>
 
       <a href="https://www.altrs.wiki/port/seatrader.html">
-      <div class="box" style="background-color:#698955; color: #bed7e4; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#698955', '#bed7e4')" style="background-color:#698955; color: #bed7e4; border-color: black;">
         <div class="box-text">
           <p class="date">2022</p>
           <p class="inner-title">Seatrader</p>
@@ -168,7 +178,7 @@
       </a>
 
       <a href="https://www.altrs.wiki/tired-tech.html">
-      <div class="box" style="background-color:#ea5e42; color: #ffecb9; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#ea5e42', '#ffecb9')" style="background-color:#ea5e42; color: #ffecb9; border-color: black;">
         <div class="box-text">
           <p class="date">2023</p>
           <p class="inner-title">The technology is tired</p>
@@ -179,18 +189,18 @@
       </a>
 
       <a href="https://www.altrs.wiki/traditional.html">
-      <div class="box" style="background-color:#b2d0df; color: #ea4f4f; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#b2d0df', '#ea4f4f')" style="background-color:#b2d0df; color: #ea4f4f; border-color: black;">
         <div class="box-text">
           <p class="date">2019-2023</p>
-          <p class="inner-title">TRADITIONAL/PHYSICAL</p>
+          <p class="inner-title">TRADITIONAL/2D</p>
           <p class="detail">CONTAINS # PROJECTS</p>
         </div>
-        <div class="inner-box">CONTE / PAINT / PENCIL / ++<span></span></div>
+        <div class="inner-box">CONTE / PENCIL / PHOTOSHOP / ++<span></span></div>
       </div>
       </a>
 
-      <a href="https://www.altrs.wiki/port/geography-cyberspace.html">
-      <div class="box" style="background-color:#575d24; color: #52da62; border-color: black;">
+      <a href="https://docs.google.com/document/d/1fqNKSJ-RknZv4Gxg2yLSJ8ZG56thL5ku2ytMR6zHCfc/edit?usp=sharing">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#698955', '#bed7e4')" style="background-color:#575d24; color: #52da62; border-color: black;">
         <div class="box-text">
           <p class="date">2023</p>
           <p class="inner-title">The Geography of CyberSpace</p>
@@ -205,7 +215,7 @@
     <div class="column">
 
       <a href="https://www.altrs.wiki/limbs.html">
-      <div class="box" style="background-color:#0073ae; color: #1d1d1d; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#0073ae', '#1d1d1d')" style="background-color:#0073ae; color: #1d1d1d; border-color: black;">
         <div class="box-text">
           <p class="date">2022</p>
           <p class="inner-title">A brain burst limbs</p>
@@ -216,7 +226,7 @@
       </a>
 
       <a href="https://www.altrs.wiki/port/digital-div-nav.html">
-      <div class="box" style="background-color:#282949; color: #d07d33; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#282949', '#d07d33')" style="background-color:#282949; color: #d07d33; border-color: black;">
         <div class="box-text">
           <p class="date">2022-2023</p>
           <p class="inner-title">Digital Divination</p>
@@ -228,7 +238,7 @@
       </a>
 
       <a href="https://www.altrs.wiki/port/online-games-nav.html">
-      <div class="box" style="background-color:#b893c7; color: #0073c3; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#b893c7', '#0073c3')" style="background-color:#b893c7; color: #0073c3; border-color: black;">
         <div class="box-text">
           <p class="date">2020-2023</p>
           <p class="inner-title">ONLINE GAMES</p>
@@ -240,10 +250,10 @@
       </a>
 
       <a href="https://www.altrs.wiki/3d.html">
-      <div class="box" style="background-color:#1b39a7; color: #a2cc8a; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#1b39a7', '#a2cc8a')" style="background-color:#1b39a7; color: #a2cc8a; border-color: black;">
         <div class="box-text">
           <p class="date">2019-2023</p>
-          <p class="inner-title">DIGITAL/3D WORK</p>
+          <p class="inner-title">3D WORK</p>
           <p class="detail">CONTAINS # PROJECTS</p>
         </div>
         <div class="inner-box">BLENDER / PHOTOSHOP / PREMEIRE PRO<span></span></div>
@@ -251,7 +261,7 @@
       </a>
 
       <a href="https://www.altrs.wiki/port/freelance.html">
-      <div class="box" style="background-color:#402d2d; color: #a1b823; border-color: black;">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#402d2d', '#a1b823')" style="background-color:#402d2d; color: #a1b823; border-color: black;">
         <div class="box-text">
           <p class="date">2018-2023</p>
           <p class="inner-title">Freelance Work</p>
@@ -264,6 +274,30 @@
     </div>
 
   </div>
+
+  <script>
+
+    let title = document.getElementById('highlight-title');
+
+    function highlight (){
+      title.innerHTML = "<mark>ROBIN ALTMAN<br><i>CREATIVE TECHNOLOGY PORTFOLIO</i></mark>";
+    }
+
+    function unhighlight (){
+     title.innerHTML = "ROBIN ALTMAN<br><i>CREATIVE TECHNOLOGY PORTFOLIO</i>";
+    }
+
+    function boxhighlight(div){
+      div.style.backgroundColor = "white";
+      div.style.color = "black";
+    }
+
+    function boxunhighlight(div, c1, c2){
+      div.style.backgroundColor = c1;
+      div.style.color = c2;
+    }
+
+  </script>
 
 </body>
 </html>
