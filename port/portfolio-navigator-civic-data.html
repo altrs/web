@@ -17,17 +17,25 @@
   <title>Navigator</title>
   <style>
 
-    @media (max-width: 800px) {
+    /*@media (max-width: 800px) {
       body{
         padding: 5%;
+        padding-left: 0%;
+        padding-right: 0%;
       }
-    }
+    }*/
 
     body{
       font-family: "Arial";
       padding: 5%;
       padding-left: 15%;
       padding-right: 15%;
+      font-size: 1vw;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
     }
 
     .title{
@@ -47,59 +55,194 @@
       padding: 10px;
     }
 
-    .row{
+    .container {
       display: flex;
       justify-content: space-between;
-      margin-top: 50px;
-      padding: 10px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 10px;
     }
 
-    .row div{
-      border: 1px solid;
-      width: 45%;
-      height: 250px;
+    .column {
+      flex: 1;
+      margin: 2%;
     }
-    
+
+    .box {
+      position: relative;
+      border: 1px solid;
+      margin-bottom: 20px;
+      height: 200%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .inner-box {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 13%;
+      text-align: justify;
+      border-top: 1px solid black;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-sizing: border-box; 
+    }
+
+    span {
+      width:100%;
+      height:1em;
+      display:inline-block;
+    }
+
+    .date{
+      position: absolute;
+      top: 0;
+      right: 5px;
+    }
+
+    .inner-title{
+      text-align: left;
+      position: absolute;
+      top: 25%;
+      left: 5px;
+      font-weight: 900;
+      font-size: 2vw;
+    }
+
+    .detail{
+      text-align: right;
+      position: absolute;
+      bottom: 10%;
+      right: 5px;
+    }
+
+    .title2{
+      position: absolute;
+      font-size: 1vw;
+      left: 5px;
+      top: 47%;
+      width: 70%;
+      font-weight: 100;
+    }
+
   </style>
 </head>
 <body>
 
   <div class="title">
-    <h1>ROBIN ALTMAN <br>CREATIVE TECHNOLOGY PORTFOLIO NAVIGATOR</h1>
+    <h1>ROBIN ALTMAN <br><i>CREATIVE TECHNOLOGY PORTFOLIO</i></h1>
   </div>
 
   <div class="menu">
-    <a><p style="justify-content: left; text-align: left;">1.0 LINK TO MAIN SITE</p></a>
-    <p style="justify-content: right; text-align: right;">2.0 LINK TO RESUME</p>
+    <a href="https://www.altrs.wiki/"><p style="justify-content: left; text-align: left;">1.0 LINK TO MAIN SITE</p></a>
+    <a href="https://www.altrs.wiki/port/resume"><p style="justify-content: right; text-align: right;">2.0 LINK TO RESUME</p></a>
   </div>
 
-  <div class="gallery">
+  <div class="container">
 
-    <div class="row">
-      <div></div>
-      <div></div>
+    <div class="column">
+
+      <div class="box" style="background-color:#db9898; color: #6af1d6; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">'JUNGLE' CHANPAN</p>
+          <p class="detail">CONTAINS 3 ENVIRONMENTS</p>
+        </div>
+        <div class="inner-box">VIRTUAL PRODUCTION + UNREAL ENGINE +  OSC<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#698955; color: #bed7e4; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022</p>
+          <p class="inner-title">Seatrader</p>
+          <p class="detail">CONTAINS 1 PROJECT</p>
+        </div>
+        <div class="inner-box">UNITY + BLENDER<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#ea5e42; color: #ffecb9; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">The technology is tired</p>
+          <p class="detail">CONTAINS 1 PROJECT</p>
+        </div>
+        <div class="inner-box">JAVASCRIPT + COMPUTER VISION + ARDUINO<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#b2d0df; color: #ea4f4f; border-color: black;">
+        <div class="box-text">
+          <p class="date">2019-2023</p>
+          <p class="inner-title">TRADITIONAL/PHYSICAL</p>
+          <p class="detail">CONTAINS # PROJECTS</p>
+        </div>
+        <div class="inner-box">CONTE / PAINT / PENCIL / ++<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#575d24; color: #52da62; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">The Geography of CyberSpace</p>
+          <p class="detail">CONTAINS 1 RESEARCH PAPER</p>
+        </div>
+        <div class="inner-box">VIRTUAL PRODUCTION + UNREAL ENGINE +  OSC<span></span></div>
+      </div>
+
     </div>
 
-    <div class="row">
-      <div></div>
-      <div></div>
+    <div class="column">
+
+      <div class="box" style="background-color:#0073ae; color: #1d1d1d; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022</p>
+          <p class="inner-title">A brain burst limbs</p>
+          <p class="detail">CONTAINS 1 PROJECT</p>
+        </div>
+        <div class="inner-box">ARDUINO + RASPI + PROCESSING<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#282949; color: #d07d33; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022-2023</p>
+          <p class="inner-title">Digital Divination</p>
+          <p class="title2">(WEATHERWORK, SPELLWORK)</p>
+          <p class="detail">CONTAINS 2 PROJECTS</p>
+        </div>
+        <div class="inner-box">UNITY + BLENDER<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#b893c7; color: #0073c3; border-color: black;">
+        <div class="box-text">
+          <p class="date">2020-2023</p>
+          <p class="inner-title">ONLINE GAMES</p>
+          <p class="title2">(BUGS GAME, BREAKOUT, I AM ALONE, ENVIROHYPNO, MIND’S EYE, ++)</p>
+          <p class="detail">CONTAINS 5 PROJECTS</p>
+        </div>
+        <div class="inner-box">JAVASCRIPT / JAVA<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#1b39a7; color: #a2cc8a; border-color: black;">
+        <div class="box-text">
+          <p class="date">2019-2023</p>
+          <p class="inner-title">DIGITAL/3D WORK</p>
+          <p class="detail">CONTAINS # PROJECTS</p>
+        </div>
+        <div class="inner-box">BLENDER / PHOTOSHOP / PREMEIRE PRO<span></span></div>
+      </div>
+
+      <div class="box" style="background-color:#402d2d; color: #a1b823; border-color: black;">
+        <div class="box-text">
+          <p class="date">2018-2023</p>
+          <p class="inner-title">Freelance Work</p>
+          <p class="detail">CONTAINS # PROJECTS</p>
+        </div>
+        <div class="inner-box">ADOBE / CHALK / PAINT / ++<span></span></div>
+      </div>
+
     </div>
 
-    <div class="row">
-      <div></div>
-      <div></div>
-    </div>
-
-    <div class="row">
-      <div></div>
-      <div></div>
-    </div>
-
-    <div class="row">
-      <div></div>
-      <div></div>
-    </div>
-    
   </div>
 
 </body>
