@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5571FMTMPK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5571FMTMPK');
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Online Games Navigator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Sora:wght@300&display=swap');
+
+    a{
+      text-decoration: none;
+    }
+
+    body{
+      background-color: #e5e0cb;
+    }
+
+    h1 {
+      font-family: "Times";
+    }
+
+    h1:hover{
+      font-family: "Pixelify Sans";
+    }
+
+    div{
+      cursor: pointer;
+    }
+
+    #container {
+      padding: 20px;
+      margin-top: 100px;
+      font-family: "Shippori Mincho";
+    }
+
+    .line{
+      display: flex;
+/*      border: 1px solid;*/
+    }
+
+    .num{
+      padding: 3px;
+      padding-right: 6px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    .title{
+      padding: 3px;
+      padding-right: 6px;
+      font-size: 1.2vw;
+    }
+
+    .smal{
+      font-size: .9vw;
+    }
+
+    @keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    .rotating-image {
+      animation: rotate 5s linear infinite; /* Adjust the duration and timing function as needed */
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+
+    <a href="https://www.altrs.wiki/port/portfolio-navigator.html"><img class="rotating-image" style="width: 10%" src="../assets/icon_test.gif"/></a>
+    <h1 onmouseenter="highlight(1, '#7260fa', '#282949', '#d07d33');highlight(2, '#9ecb3e', '#eb9f66', '#00000')" onmouseleave="unhighlight(1, '#b893c7', '#0073c3', '#e2e2e2');unhighlight(2, '#9ecb3e', '#526e15', '#00000');"  ><i>CHOOSE YOUR DESTINATION</i></h1> 
+    <br><br>
+
+    <!-- LINES -->
+
+    <a href="https://altrs.github.io/bugs-game/index.html"><div class="line" onmouseenter="highlight(1, '#7260fa', '#282949', '#d07d33')" onmouseleave="unhighlight(1, '#b893c7', '#0073c3', '#e2e2e2');">
+      <div class="num" id="num1" style="background-color: #80b7c3; color: #e2e2e2" class="num">1.0</div>
+      <div id="title1" style="background-color: #0073c3;" class="title">BUGS GAME<br><span class="smal"> + Collect bugs and decide their fate (2022) (p5.js)</span></div>
+    </div></a><br>
+
+    <a href="https://altrs.github.io/envirohypno/index.html">
+      <div class="line" onmouseenter="highlight(2, '#c9af1e', '#eb9f66', '#00000')" onmouseleave="unhighlight(2, '#9ecb3e', '#526e15', '#b9dbe2');">
+        <div class="num"  id="num2" style="background-color: #9ecb3e; color: #b9dbe2" class="num">2.0</div>
+        <div id="title2" style="background-color: #526e15;" class="title">Envirohypno<br><span class="smal"> + Field recorder and hypnosis mixer (2022)(javascript)</span></div>
+      </div>
+    </a><br>
+
+     <a href="https://altrs.github.io/self-as-systems/">
+      <div class="line" onmouseenter="highlight(3, '#c9af1e', '#89cc6f', '#414240')" onmouseleave="unhighlight(3, '#35446f', '#7589d0', '#afd993');">
+        <div class="num"  id="num3" style="background-color: #35446f; color: #afd993" class="num">3.0</div>
+        <div id="title3" style="background-color: #7589d0;" class="title">I AM ALONE<br><span class="smal"> + Exploration of systems of thought regarding solitary experiences (2023)(javascript)</span></div>
+      </div>
+    </a><br>
+
+    <a href="https://altrs.github.io/breakout/index.html">
+      <div class="line" onmouseenter="highlight(4, '#50929e', '#8e78c5', '#2b2b29')" onmouseleave="unhighlight(4, '#ebd57e', '#f17c3c', '#cdcdcd');">
+        <div class="num"  id="num4" style="background-color: #ebd57e; color: #cdcdcd" class="num">4.0</div>
+        <div id="title4" style="background-color: #f17c3c;" class="title">Breakout<br><span class="smal"> + Experimental digital escape room (2022)(p5.js)</span></div>
+      </div>
+    </a><br>
+
+    <a href="https://www.altrs.wiki/mindseye.html">
+      <div class="line" onmouseenter="highlight(5, '#c9af1e', '#eb9f66', '#00000')" onmouseleave="unhighlight(5, '#57545c', '#6f6382', '#e1d0fa');">
+        <div class="num"  id="num5" style="background-color: #57545c; color: #e1d0fa" class="num">5.0</div>
+        <div id="title5" style="background-color: #6f6382;" class="title">Mind's Eye<br><span class="smal"> + Interactive art experience exploring mental interpretation, observation, boundaries of reality (2022)(javascript, raspi, physical objects)</span></div>
+      </div>
+    </a><br>
+
+    <a href="https://youtu.be/Ldq6SKOvtDI?si=U-K2ehz25lF_xprn">
+      <div class="line" onmouseenter="highlight(6, '#525553', '#848584', '#00000')" onmouseleave="unhighlight(6, '#74b2bf', '#36545a', '#82cea6');">
+        <div class="num"  id="num6" style="background-color: #74b2bf; color: #82cea6" class="num">6.0</div>
+        <div id="title6" style="background-color: #36545a; color: #82cea6" class="title">The objective is to end this game<br><span class="smal"> + Text adventure game inspired by the feelings of being overwhelmed and contained simultaneously (2020)(java)</span></div>
+      </div>
+    </a><br>
+
+    <a href="https://www.youtube.com/watch?v=u3qapHRcDyI">
+      <div class="line" onmouseenter="highlight(7, '#698955', '#3d9406', '#b0b0b0')" onmouseleave="unhighlight(7, '#9ecb3e', '#526e15', '#b0b0b0');">
+        <div class="num"  id="num7" style="background-color: #282d2a; color: #a397cb" class="num">7.0</div>
+        <div id="title7" style="background-color: #1d5638; color: #a397cb" class="title">Who drowned Atlantis?<br><span class="smal"> + Digital interactive piece depicting a fake utopia deemed something we are supposed to long for (2020)(java)</span></div>
+      </div>
+    </a><br>
+
+    </div>
+  <script>
+
+
+    function highlight(number, c1, c2, c3) {
+      let num = document.getElementById(`num${number}`);
+      let title = document.getElementById(`title${number}`);
+
+      num.style.backgroundColor = c1;
+      title.style.backgroundColor = c2;
+      num.style.color = c3;
+      title.style.color = c3;
+    }
+
+    function unhighlight(number, c1, c2, c3) {
+      let num = document.getElementById(`num${number}`);
+      let title = document.getElementById(`title${number}`);
+      num.style.backgroundColor = c1;
+      num.style.color = c3;
+      title.style.backgroundColor = c2;
+      title.style.color = c3;
+    }
+
+    highlight(1, '#b893c7', '#0073c3', '#e2e2e2');
+    highlight(2, '#9ecb3e', '#eb9f66', '#00000');
+   
+  </script>
+
+</body>
+</html>
