@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5571FMTMPK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5571FMTMPK');
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Divination Navigator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=M+PLUS+Code+Latin:wght@400;600&family=Pixelify+Sans&family=Shippori+Mincho:wght@400;700&display=swap');
+
+    h1 {
+      font-family: "Inter";
+    }
+
+    div{
+      cursor: pointer;
+    }
+
+    #container {
+      padding: 20px;
+      margin-top: 100px;
+      font-family: "Shippori Mincho";
+    }
+
+    .line{
+      display: flex;
+/*      border: 1px solid;*/
+    }
+
+    .num{
+      padding: 3px;
+    }
+
+    .title{
+      padding: 3px;
+    }
+
+    .smal{
+      font-size: .8vw;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <img style="width: 10%" src="../assets/icon_test.gif"/>
+    <h1><i>CHOOSE YOUR DESTINATION</i></h1> 
+    <br><br>
+
+    <div class="line" onmouseenter="highlight(1, '#7260fa', '#282949', '#d07d33')" onmouseleave="unhighlight(1, '#b893c7', '#0073c3', '#e2e2e2');">
+      <div id="num1" style="background-color: #b893c7; color: #e2e2e2" class="num">1.0</div>
+      <div id="title1" style="background-color: #0073c3;" class="title">THE EARTH HAS SOMETHING TO SHOW YOU <br><span class="smal"> + Digital divination via gaze tracker and weather api</span></div>
+    </div><br>
+
+    <div class="line" onmouseenter="highlight(2, '#9ecb3e', '#eb9f66', '#00000')" onmouseleave="unhighlight(2, '#9ecb3e', '#526e15', '#00000');">
+      <div id="num2" style="background-color: #9ecb3e; color: #eb9f66" class="num">2.0</div>
+      <div id="title2" style="background-color: #526e15;" class="title">ONLINE SPELLWORK<br><span class="smal"> + Digital divination via chatgpt api</span></div>
+    </div>
+
+
+  </div>
+
+  <script>
+
+    function highlight(number, c1, c2, c3) {
+      let num = document.getElementById(`num${number}`);
+      let title = document.getElementById(`title${number}`);
+
+      num.style.backgroundColor = c1;
+      title.style.backgroundColor = c2;
+      num.style.color = c3;
+      title.style.color = c3;
+    }
+
+    function unhighlight(number, c1, c2, c3) {
+      let num = document.getElementById(`num${number}`);
+      let title = document.getElementById(`title${number}`);
+      num.style.backgroundColor = c1;
+      num.style.color = c3;
+      title.style.backgroundColor = c2;
+      title.style.color = c3;
+    }
+   
+  </script>
+
+</body>
+</html>
