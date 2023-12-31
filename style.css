@@ -2,6 +2,11 @@
 /* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
 /* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
 
+
+body {
+  user-select: none;
+}
+
 #back{
   background: url("assets/texture.gif");
   background-position: center;
@@ -268,7 +273,7 @@ a{
 
 #gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
   grid-gap: 10px;
 }
 

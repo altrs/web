@@ -18,8 +18,8 @@
   <style>
 
     body {
-    user-select: none;
-  }
+      user-select: none;
+    }
 
   .container {
     max-width: 1600px;
@@ -110,86 +110,85 @@
     <script type="text/javascript">
     
     const gallery = document.getElementById('gallery');
-const popup = document.getElementById('popup');
-const selectedImage = document.getElementById('selectedImage');
-const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-let selectedIndex = null;
+    const popup = document.getElementById('popup');
+    const selectedImage = document.getElementById('selectedImage');
+    const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+    let selectedIndex = null;
 
-for (let i = 0; i < imageIndexes.length; i++) {
-  const imageIndex = imageIndexes[i];
+    for (let i = 0; i < imageIndexes.length; i++) {
+      const imageIndex = imageIndexes[i];
 
-  // container
-  const container = document.createElement('div');
-  container.classList.add('imageContainer');
+      // container
+      const container = document.createElement('div');
+      container.classList.add('imageContainer');
 
-  // image
-  const image = document.createElement('img');
-  image.src = `assets/freelance/${imageIndex}.png`;
-  container.appendChild(image);
-  image.classList.add('galleryImg');
+      // image
+      const image = document.createElement('img');
+      image.src = `assets/freelance/${imageIndex}.png`;
+      container.appendChild(image);
+      image.classList.add('galleryImg');
 
-  // title
-  const title = document.createElement('p');
-  title.textContent = `${imageIndex}.FREELANCE-img`;
-  title.classList.add('text');
+      // title
+      const title = document.createElement('p');
+      title.textContent = `${imageIndex}.FREELANCE-img`;
+      title.classList.add('text');
 
-  container.appendChild(title);
+      container.appendChild(title);
 
-  // Use a closure to capture the current imageIndex value
-  container.addEventListener('click', (function (currentIndex) {
-    return function () {
-      showPopup(currentIndex);
-    };
-  })(imageIndex));
+      // Use a closure to capture the current imageIndex value
+      container.addEventListener('click', (function (currentIndex) {
+        return function () {
+          showPopup(currentIndex);
+        };
+      })(imageIndex));
 
-  gallery.appendChild(container);
-}
-
-popup.addEventListener('click', () => {
-  popup.style.transform = 'translateY(-100%)';
-  selectedImage.src = '';
-  removeKeydownListener();
-});
-
-function showPopup(index) {
-  popup.style.transform = 'translateY(0)';
-  selectedImage.src = `assets/freelance/${index}.png`;
-  selectedIndex = index;
-  addKeydownListener();
-}
-
-function handleKeydown(event) {
-  if (popup.style.transform === 'translateY(0px)') {
-    switch (event.key) {
-      case 'ArrowLeft':
-      case 'Left':
-        if (selectedIndex > 0) {
-          showPopup(selectedIndex - 1);
-        }
-        break;
-      case 'ArrowRight':
-      case 'Right':
-        if (selectedIndex < imageIndexes.length - 1) {
-          showPopup(selectedIndex + 1);
-        }
-        break;
-      case 'Escape':
-        popup.style.transform = 'translateY(-100%)';
-        selectedImage.src = '';
-        removeKeydownListener();
-        break;
+      gallery.appendChild(container);
     }
-  }
-}
 
-function addKeydownListener() {
-  document.addEventListener('keydown', handleKeydown);
-}
+    popup.addEventListener('click', () => {
+      popup.style.transform = 'translateY(-100%)';
+      selectedImage.src = '';
+      removeKeydownListener();
+    });
 
-function removeKeydownListener() {
-  document.removeEventListener('keydown', handleKeydown);
-}
+    function showPopup(index) {
+      popup.style.transform = 'translateY(0)';
+      selectedImage.src = `assets/freelance/${index}.png`;
+      selectedIndex = index;
+      addKeydownListener();
+    }
 
+    function handleKeydown(event) {
+      if (popup.style.transform === 'translateY(0px)') {
+        switch (event.key) {
+          case 'ArrowLeft':
+          case 'Left':
+            if (selectedIndex > 0) {
+              showPopup(selectedIndex - 1);
+            }
+            break;
+          case 'ArrowRight':
+          case 'Right':
+            if (selectedIndex < imageIndexes.length - 1) {
+              showPopup(selectedIndex + 1);
+            }
+            break;
+          case 'Escape':
+            popup.style.transform = 'translateY(-100%)';
+            selectedImage.src = '';
+            removeKeydownListener();
+            break;
+        }
+      }
+    }
+
+    function addKeydownListener() {
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    function removeKeydownListener() {
+      document.removeEventListener('keydown', handleKeydown);
+    }
 
   </script>
 

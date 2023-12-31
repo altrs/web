@@ -34,7 +34,7 @@
 
   #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 170px));
     grid-gap: 20px;
   }
 
@@ -89,6 +89,8 @@
 
     <div class="container">
       <div id="gallery"></div>
+      <br>
+      <p style="font-size: 11px;"><i>* IMGS 3, 9 & 11, CLICK FOR EXTERNAL LINKS</i></p>
     </div>
 
     <div id="popup">
@@ -102,7 +104,7 @@
     const popup = document.getElementById('popup');
     const selectedImage = document.getElementById('selectedImage');
     const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    const selectedIndex = null;
+    let selectedIndex = null;
 
     for (let i = 0; i < imageIndexes.length; i++) {
       const imageIndex = imageIndexes[i];
@@ -162,6 +164,7 @@
           } else{
             selectedImage.src = `assets/trad/${currentIndex}.png`;
           }
+          showPopup(currentIndex);
         };
       })(imageIndex));
 
@@ -171,7 +174,47 @@
     popup.addEventListener('click', () => {
       popup.style.transform = 'translateY(-100%)';
       selectedImage.src = '';
+      removeKeydownListener();
     });
+
+    function showPopup(index) {
+      popup.style.transform = 'translateY(0)';
+      selectedImage.src = `assets/trad/${index}.png`;
+      selectedIndex = index;
+      addKeydownListener();
+    }
+
+    function handleKeydown(event) {
+      if (popup.style.transform === 'translateY(0px)') {
+        switch (event.key) {
+          case 'ArrowLeft':
+          case 'Left':
+            if (selectedIndex > 0) {
+              showPopup(selectedIndex - 1);
+            }
+            break;
+          case 'ArrowRight':
+          case 'Right':
+            if (selectedIndex < imageIndexes.length - 1) {
+              showPopup(selectedIndex + 1);
+            }
+            break;
+          case 'Escape':
+            popup.style.transform = 'translateY(-100%)';
+            selectedImage.src = '';
+            removeKeydownListener();
+            break;
+        }
+      }
+    }
+
+    function addKeydownListener() {
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    function removeKeydownListener() {
+      document.removeEventListener('keydown', handleKeydown);
+    }
 
 
   </script>

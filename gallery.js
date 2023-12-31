@@ -2,7 +2,7 @@ const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');
 const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-const selectedIndex = null;
+let selectedIndex = null;
 
 for (let i = 0; i < imageIndexes.length; i++) {
   const imageIndex = imageIndexes[i];
@@ -53,12 +53,11 @@ for (let i = 0; i < imageIndexes.length; i++) {
       popup.style.transform = 'translateY(0)';
       if (currentIndex === 1 || currentIndex === 2 || currentIndex === 4 || currentIndex === 8) {
         selectedImage.src = `assets/threedee/${currentIndex}.gif`;
-      }else if(currentIndex === 5){
-        popup.style.transform = 'translateY(-100%)';
-      } 
+      }
       else {
         selectedImage.src = `assets/threedee/${currentIndex}.png`;
       }
+      showPopup(currentIndex);
     };
   })(imageIndex));
 
@@ -66,9 +65,55 @@ for (let i = 0; i < imageIndexes.length; i++) {
 }
 
 popup.addEventListener('click', () => {
-  popup.style.transform = 'translateY(-100%)';
-  selectedImage.src = '';
-});
+      popup.style.transform = 'translateY(-100%)';
+      selectedImage.src = '';
+      removeKeydownListener();
+    });
+
+    function showPopup(index) {
+      popup.style.transform = 'translateY(0px)';
+      if (index === 1 || index === 2 || index === 4 || index === 8) {
+        selectedImage.src = `assets/threedee/${index}.gif`;
+      } else if (index === 5) {
+        selectedImage.src = `assets/threedee/${index}.png`;
+      } else {
+        selectedImage.src = `assets/threedee/${index}.png`;
+      }
+      selectedIndex = index;
+      addKeydownListener();
+    }
+
+    function handleKeydown(event) {
+      if (popup.style.transform === 'translateY(0px)') {
+        switch (event.key) {
+          case 'ArrowLeft':
+          case 'Left':
+            if (selectedIndex > 0) {
+              showPopup(selectedIndex - 1);
+            }
+            break;
+          case 'ArrowRight':
+          case 'Right':
+            if (selectedIndex < imageIndexes.length - 1) {
+              showPopup(selectedIndex + 1);
+            }
+            break;
+          case 'Escape':
+            popup.style.transform = 'translateY(-100%)';
+            selectedImage.src = '';
+            removeKeydownListener();
+            break;
+        }
+      }
+    }
+
+    function addKeydownListener() {
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    function removeKeydownListener() {
+      document.removeEventListener('keydown', handleKeydown);
+    }
 
 
 
