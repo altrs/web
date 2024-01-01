@@ -34,13 +34,62 @@
 
     .popup{
       border: 1px solid;
+      position: absolute;
+      background-color: wheat;
+      width: 60%;
+      height: 350px;
+      display: flex;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.5s ease-in-out;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .popup.active {
+      opacity: 1; /* Make the popup visible when the 'active' class is applied */
+    }
+
+    .popup p{
+      width: 80%;
+    }
+
+    #myAudio {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+      width: 60%;
+    }
+
+    .yt{
+      width: 560px;
+      height: 315px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .gif{
+        width: 90px;
+      }
+      .popup p{
+        width: 90%;
+      }
+      .yt{
+        width:280px;
+        height: 157px;
+      }
     }
 
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" id="triggerDiv">
 
     <a href="index.html"><img class="home" width="20" height="35" style="margin-left: 30px;margin-top: 30px" src="https://cdn.glitch.global/2c6e8cd8-8e3c-4a11-9eb3-223bdc72ff66/ava3.png?v=1678810899933"/></a>
 
@@ -53,81 +102,66 @@
   </div>
 
   <div class="container">
-    <p>꩜ CONCEPT ꩜ <br><br> A mechanical ‘puppet box’ that only plays <br>when the viewer’s eyes are closed.</p>
+    <!-- POPUPS -->
+    <div class="popup" id="1">
+      <img class="gif" src="assets/tiredtech/3.gif"/>
+      <p>‘The technology is tired’ is a story about an entity who tries to surpass the ‘technology of reality’, they attempt to cope with their reality by recreating it. Their ‘love letter’ to the universe is embodied by the act of creation - specifically, Machine is creating the highest, most sophisticated technology possible, hoping to one day, create the universe itself – <i>a suicidal hommage.</i></p>
+    </div>
+
+    <div class="popup" id="2">
+      <p>As Ursula K. Le Guin puts it, “technology is how a society copes with physical reality.”<br>꩜<br>“A creature named Machine sits, thinking of all the ways it could create the universe. Every hour of every day, Machine is writing its love letter to the universe. Everytime, it goes something like this …… ”</p>
+    </div>
+
+    <div class="popup" id="3">
+      <p>Goal: reveal something we 'cannot see', a place we supposedly ‘cannot go.'</p>
+      <img class="gif" src="assets/tiredtech/4.gif"/>
+      <p>But who’s to say what we can and cannot do?</p>
+    </div>
+
+    <div class="popup" id="4">
+      <p>Tech giants do not want us to disconnect technology from the ideals of the future. They do not want us to see a future void of tech dependency.</p>
+      <iframe class="yt" src="https://www.youtube.com/embed/-fGCLXfsen8?si=t0_6eKnWcMriA0eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>Hi-tech or low-tech, how much does it matter? The mundane of yesterday will still be mundane tomorrow and utopia is now.</p>
+    </div>
+
+    <div class="popup" id="5">
+      <p>Machine fails each time they try to create the universe. “The creature attempts and attempts and attempts. Defeated, they cry, 'AM I YOU YET? IN UTOPIA, I WILL BE YOU.”</p>
+      <div class="horiz">
+        <img class="gif" src="assets/tiredtech/5.png"/>
+        <img class="gif" src="assets/tiredtech/5.gif"/>
+      </div>
+    </div>
+
+
+    <div class="popup" id="6">
+      <p>“After an eternity of attempts, the creature pleads to the universe…” The universe responds as it always has and always will: steady, patient, unmoved but not unaffected, and always within reach.</p>
+      <div class="horiz">
+        <img class="gif" src="assets/tiredtech/6.gif"/>
+        <img class="gif" src="assets/tiredtech/6.gif"/>
+        <img class="gif" src="assets/tiredtech/6.gif"/>
+      </div>
+      <p>Our actions hurt the earth. People might want/expect to see rage and wrath and fury. They will reject the radical notion that the universe was so kind. But in this story, the universe is kind, in the sense that reality continues moving forward, both punishment and compassion as per usual. <br>“I thought the earth remembered me, she took me back so tenderly” (Mary Oliver)</p>
+    </div>
+
+
+    <div class="popup" id="7">
+      <p>This story explores the idea that we don't have to create or invent a beautiful, epic world in order to be apart of one. We can contribute to one that already exists. There is no need to romanize a utopia, as always wanting a positive experience is a negative experience.<br><br>꩜
+  </p>
+      <div class="horiz">
+        <img class="gif" src="assets/tiredtech/7-1.jpg"/>
+        <img class="gif" src="assets/tiredtech/7-2.jpg"/>
+        <img class="gif" src="assets/tiredtech/7-3.jpg"/>
+      </div>
+    </div>
+    <!-- POPUPS -->
+
+    <p>꩜ CONCEPT ꩜ <br><br> A mechanical ‘puppet box’ that only plays <br>when the viewer’s eyes are closed. <br><br><br><br> Play audio to begin presentation.</p>
     <audio id="myAudio" controls>
-      <source src="assets/tiredtech/audio.wav" type="audio/wav">
+      <source src="assets/tiredtech/audio.m4a" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </div>
 
-
-  <div class="popup" id="1">
-    <img class="gif" src="assets/tiredtech/3.gif"/>
-    <p>‘The technology is tired’ is a story about an entity who tries to surpass the ‘technology of reality’, they attempt to cope with their reality by recreating it. Their ‘love letter’ to the universe is embodied by the act of creation - specifically, Machine is creating the highest, most sophisticated technology possible, hoping to one day, create the universe itself – <i>a suicidal hommage.</i></p>
-  </div>
-
-  <div class="popup" id="2">
-    <p>As Ursula K. Le Guin puts it, “technology is how a society copes with physical reality.”<br>꩜<br>“A creature named Machine sits, thinking of all the ways it could create the universe. Every hour of every day, Machine is writing its love letter to the universe. Everytime, it goes something like this …… ”</p>
-  </div>
-
-  <div class="popup" id="3">
-    <p>Goal: reveal something we 'cannot see', a place we supposedly ‘cannot go.'</p>
-    <img class="gif" src="assets/tiredtech/4.gif"/>
-    <p>But who’s to say what we can and cannot do?</p>
-  </div>
-
-  <div class="popup" id="4">
-    <p>Tech giants do not want us to disconnect technology from the ideals of the future. They do not want us to see a future void of tech dependency.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-fGCLXfsen8?si=t0_6eKnWcMriA0eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>Hi-tech or low-tech, how much does it matter? The mundane of yesterday will still be mundane tomorrow and utopia is now.</p>
-  </div>
-
-  <div class="popup" id="5">
-    <p>Machine fails each time they try to create the universe. “The creature attempts and attempts and attempts. Defeated, they cry, 'AM I YOU YET? IN UTOPIA, I WILL BE YOU.”</p>
-    <div class="horiz">
-      <img class="gif" src="assets/tiredtech/5.png"/>
-      <img class="gif" src="assets/tiredtech/5.gif"/>
-    </div>
-  </div>
-
-  <div class="popup" id="5">
-    <p>Machine fails each time they try to create the universe. “The creature attempts and attempts and attempts. Defeated, they cry, 'AM I YOU YET? IN UTOPIA, I WILL BE YOU.”</p>
-    <div class="horiz">
-      <img class="gif" src="assets/tiredtech/5.png"/>
-      <img class="gif" src="assets/tiredtech/5.gif"/>
-    </div>
-  </div>
-
-  <div class="popup" id="5">
-    <p>“After an eternity of attempts, the creature pleads to the universe…” The universe responds as it always has and always will: steady, patient, unmoved but not unaffected, and always within reach.</p>
-    <div class="horiz">
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <p>Our actions hurt the earth. People might want/expect to see rage and wrath and fury. They will reject the radical notion that the universe was so kind. But in this story, the universe is kind, in the sense that reality continues moving forward, both punishment and compassion as per usual. <br>“I thought the earth remembered me, she took me back so tenderly” (Mary Oliver)</p>
-    </div>
-  </div>
-
-
-  <div class="popup" id="5">
-    <p>“After an eternity of attempts, the creature pleads to the universe…” The universe responds as it always has and always will: steady, patient, unmoved but not unaffected, and always within reach.</p>
-    <div class="horiz">
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <img class="gif" src="assets/tiredtech/6.gif"/>
-      <p>Our actions hurt the earth. People might want/expect to see rage and wrath and fury. They will reject the radical notion that the universe was so kind. But in this story, the universe is kind, in the sense that reality continues moving forward, both punishment and compassion as per usual. <br>“I thought the earth remembered me, she took me back so tenderly” (Mary Oliver)</p>
-    </div>
-  </div>
-
-  <div class="popup" id="5">
-    <p>This story explores the idea that we don't have to create or invent a beautiful, epic world in order to be apart of one. We can contribute to one that already exists. There is no need to romanize a utopia, as always wanting a positive experience is a negative experience.<br><br>꩜
-</p>
-    <div class="horiz">
-      <img class="gif" src="assets/tiredtech/7-1.jpg"/>
-      <img class="gif" src="assets/tiredtech/7-2.jpg"/>
-      <img class="gif" src="assets/tiredtech/7-3.jpg"/>
-    </div>
-  </div>
 
   <div class="container">
     Extended Write Up Info:<br><br>
@@ -200,11 +234,9 @@
       </p>
     </div>
 
-
-
     <div class="container">
       <p>Experience Simulation Video</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/__v-CpeV4oU?si=mHXGUIKix1i391p0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="yt" src="https://www.youtube.com/embed/__v-CpeV4oU?si=mHXGUIKix1i391p0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
     <div class="container">
@@ -217,12 +249,53 @@
       </p>
     </div>
 
-
-
-
-
   <script>
-    
+    window.addEventListener('scroll', function() {
+      var triggerDiv = document.getElementById('triggerDiv');
+      var fixedAudio = document.getElementById('myAudio');
+
+      var triggerDivOffset = triggerDiv.offsetTop + triggerDiv.offsetHeight/2;
+
+      if (window.pageYOffset > triggerDivOffset) {
+        fixedAudio.style.display = 'block';
+      } else {
+        fixedAudio.style.display = 'none';
+      }
+    });
+
+    let vid = document.getElementById("myAudio");
+    let popups = [];
+    for (let i = 1; i <= 7; i++) {
+      let popup = document.getElementById(`${i}`);
+      popups.push(popup);
+    }
+
+    function showPopupBasedOnTime() {
+      if (vid.currentTime > 1 && vid.currentTime < 20) {changePopup(0);}
+      else if(vid.currentTime > 20 && vid.currentTime < 50){changePopup(2);}
+      else if(vid.currentTime > 50 && vid.currentTime < 72){changePopup(1);}
+      else if(vid.currentTime > 72 && vid.currentTime < 135){changePopup(3);}
+      else if(vid.currentTime > 135 && vid.currentTime < 153){changePopup(4);}
+      else if(vid.currentTime > 153 && vid.currentTime < 210){changePopup(5);}
+      else if(vid.currentTime > 210 && vid.currentTime < 238){changePopup(6);}
+      else{changePopup(100);}
+       
+    }
+
+    function changePopup(popup){
+      for(let i=0; i<=6; i++){
+        if(i == popup){popups[i].classList.add('active');}
+        else{popups[i].classList.remove('active');}
+      }
+    }
+
+    vid.addEventListener('timeupdate', showPopupBasedOnTime);
+
+    document.addEventListener('keydown', function(event) {
+      if (event.code === 'Space') {
+        if (!vid.paused) {vid.pause();} else {vid.play();}
+      }
+    });
 
   </script>
 
