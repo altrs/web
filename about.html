@@ -147,7 +147,7 @@
         <br><br><br>
       </div>
 
-      <p>last update: 11.7.2023 12:01am :)</p>
+      <p>last update: 12.31.2023 10:12pm :)</p>
 
 
       <div id="gallery"></div>
@@ -164,18 +164,18 @@
     const gallery = document.getElementById('gallery');
     const popup = document.getElementById('popup');
     const selectedImage = document.getElementById('selectedImage');
-    const selectedIndex = null;
+    let selectedIndex = null;
     const imageIndexes = [];
 
     const openButton = document.getElementById('openPopup');
     const closeButton = document.getElementById('closePopup');
     const popup2 = document.getElementById('popup2');
 
-    for(let h=0; h<178; h++){
+    for(let h=0; h<193; h++){
       imageIndexes[h] = h;
     }
 
-    for (let i = 177; i >= 0; i--) {
+    for (let i = 192; i >= 0; i--) {
       const imageIndex = imageIndexes[i];
 
       // container
@@ -192,6 +192,7 @@
         return function () {
           popup.style.transform = 'translateY(0)';
           selectedImage.src = `assets/insta/${currentIndex}.jpg`;
+          showPopup(currentIndex);
         };
       })(imageIndex));
 
@@ -201,7 +202,47 @@
     popup.addEventListener('click', () => {
       popup.style.transform = 'translateY(-100%)';
       selectedImage.src = '';
+      removeKeydownListener();
     });
+
+    function showPopup(index) {
+      popup.style.transform = 'translateY(0)';
+      selectedImage.src = `assets/insta/${index}.jpg`;
+      selectedIndex = index;
+      addKeydownListener();
+    }
+
+    function handleKeydown(event) {
+      if (popup.style.transform === 'translateY(0px)') {
+        switch (event.key) {
+          case 'ArrowRight':
+          case 'Right':
+            if (selectedIndex > 0) {
+              showPopup(selectedIndex - 1);
+            }
+            break;
+          case 'ArrowLeft':
+          case 'Left':
+            if (selectedIndex < imageIndexes.length - 1) {
+              showPopup(selectedIndex + 1);
+            }
+            break;
+          case 'Escape':
+            popup.style.transform = 'translateY(-100%)';
+            selectedImage.src = '';
+            removeKeydownListener();
+            break;
+        }
+      }
+    }
+
+    function addKeydownListener() {
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    function removeKeydownListener() {
+      document.removeEventListener('keydown', handleKeydown);
+    }
 
     //CONTACT POPUP CONTACT POPUP CONTACT POPUP
     openButton.addEventListener('click', function() {
