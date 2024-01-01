@@ -45,6 +45,18 @@
       flex-direction: column;
     }
 
+    #container2{
+      width: 100vw;
+      height: 60vh;
+      align-items: center;
+/*      border: 1px solid;*/
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
     p{
     	width: 40%;
     	font-family: "Shippori Mincho";
@@ -64,22 +76,39 @@
     }
 
     #horiz{
-		display: flex;
-		justify-content: center;
+  		display: flex;
+  		justify-content: center;
+    }
+
+    .yt{
+      width: 560px;
+      height: 315px;
     }
 
     @media only screen and (max-width: 600px) {
     	#horiz{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
+  			display: flex;
+  			flex-direction: column;
+  			align-items: center;
+  			justify-content: center;
+  			text-align: center;
     	}
 
-    	 img{
+      #container2{
+        height: 40vh;
+      }
+
+    	img{
 	    	width: 60%;
 	    }
+
+      .yt{
+        width:280px;
+        height: 157px;
+      }
+      p{
+        font-size: 2.5vw;
+      }
     }
 
   </style>
@@ -90,12 +119,12 @@
 
 	  	<img id="title" src="assets/seatrader_title.png"><br>
 	    
-	    <iframe width="560" height="315" src="https://www.youtube.com/embed/k207HXfCz2s?si=CCU96XT33FlfURSB&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	    <iframe class="yt" src="https://www.youtube.com/embed/k207HXfCz2s?si=CCU96XT33FlfURSB&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 	</div>
 
    
-   	<div id="container">
+   	<div id="container2">
 
    		<img class="icon" src="assets/seaglass.png">
 
@@ -103,19 +132,19 @@
 
     </div>
 
-	<div id="container">
+	<div id="container2">
 		<div id="horiz">
 			<img src="assets/trade.gif">
 			<img src="assets/tradermural.png">
 		</div>
 	</div>
 
-	<div id="container">
+	<div id="container2">
 		<img style="width: 60%" src="assets/envi.png">
 	</div>
 
 
-	<div id="container">
+	<div id="container2">
 		<div style="border: 1px solid; padding: 10px;">
 			<p style="font-size: 1.5vw; width: 100%;"><a href="https://altrs.itch.io/seatrader">LINK TO GAME DEMO</a></p>
 			<p style="font-size: 0.9vw; width: 100%">(DESKTOP ONLY)</p>
