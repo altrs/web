@@ -26,6 +26,11 @@
       text-align: center;
       align-content: center;
       align-items: center;
+      font-size: 1.2vw;
+    }
+
+    .container p {
+      width: 55%;
     }
 
     .gif{
@@ -37,7 +42,7 @@
       position: absolute;
       background-color: wheat;
       width: 60%;
-      height: 350px;
+      height: 420px;
       display: flex;
       opacity: 0; /* Initially hidden */
       transition: opacity 0.5s ease-in-out;
@@ -52,7 +57,7 @@
     }
 
     .popup p{
-      width: 80%;
+      width: 73%;
     }
 
     #myAudio {
@@ -72,7 +77,31 @@
       height: 315px;
     }
 
+    .num{
+      position: absolute;
+      bottom: 5px;
+      font-size: 0.8vw;
+      margin-top: 20px;
+    }
+
+    .horiz{
+      display: flex;
+      padding: 30px;
+    }
+
+    .horiz p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      margin: 10px;
+      border: 1px solid;
+    }
+
     @media only screen and (max-width: 600px) {
+      .container{
+        font-size: 2vw;
+      }
       .gif{
         width: 90px;
       }
@@ -83,6 +112,19 @@
         width:280px;
         height: 157px;
       }
+      .popup{
+        height: 390px;
+      }
+      .horiz p{
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.5vw;
+      }
+      .horiz{
+        display: flex;
+        padding: 10px;
+      }
+    
     }
 
   </style>
@@ -106,22 +148,27 @@
     <div class="popup" id="1">
       <img class="gif" src="assets/tiredtech/3.gif"/>
       <p>‘The technology is tired’ is a story about an entity who tries to surpass the ‘technology of reality’, they attempt to cope with their reality by recreating it. Their ‘love letter’ to the universe is embodied by the act of creation - specifically, Machine is creating the highest, most sophisticated technology possible, hoping to one day, create the universe itself – <i>a suicidal hommage.</i></p>
+      <p style="font-size: 10px;">꩜ Silly creature, the universe already exists ꩜</p>
+      <p class="num">1/7</p>
     </div>
 
     <div class="popup" id="2">
-      <p>As Ursula K. Le Guin puts it, “technology is how a society copes with physical reality.”<br>꩜<br>“A creature named Machine sits, thinking of all the ways it could create the universe. Every hour of every day, Machine is writing its love letter to the universe. Everytime, it goes something like this …… ”</p>
+      <p>As Ursula K. Le Guin puts it, “technology is how a society copes with physical reality.”<br><br>꩜<br><br>“A creature named Machine sits, thinking of all the ways it could create the universe. Every hour of every day, Machine is writing its love letter to the universe. Everytime, it goes something like this …… ”</p>
+      <p class="num">3/7</p>
     </div>
 
     <div class="popup" id="3">
-      <p>Goal: reveal something we 'cannot see', a place we supposedly ‘cannot go.'</p>
+      <p>Goal: reveal something we 'cannot see', <br>a place we supposedly ‘cannot go.'</p>
       <img class="gif" src="assets/tiredtech/4.gif"/>
       <p>But who’s to say what we can and cannot do?</p>
+      <p class="num">2/7</p>
     </div>
 
     <div class="popup" id="4">
       <p>Tech giants do not want us to disconnect technology from the ideals of the future. They do not want us to see a future void of tech dependency.</p>
       <iframe class="yt" src="https://www.youtube.com/embed/-fGCLXfsen8?si=t0_6eKnWcMriA0eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <p>Hi-tech or low-tech, how much does it matter? The mundane of yesterday will still be mundane tomorrow and utopia is now.</p>
+      <p class="num">4/7</p>
     </div>
 
     <div class="popup" id="5">
@@ -130,17 +177,19 @@
         <img class="gif" src="assets/tiredtech/5.png"/>
         <img class="gif" src="assets/tiredtech/5.gif"/>
       </div>
+      <p class="num">5/7</p>
     </div>
 
 
     <div class="popup" id="6">
-      <p>“After an eternity of attempts, the creature pleads to the universe…” The universe responds as it always has and always will: steady, patient, unmoved but not unaffected, and always within reach.</p>
+      <p style="margin-bottom: 0;">“After an eternity of attempts, the creature pleads to the universe…” The universe responds as it always has and always will: steady, patient, unmoved but not unaffected, and always within reach.</p>
       <div class="horiz">
         <img class="gif" src="assets/tiredtech/6.gif"/>
         <img class="gif" src="assets/tiredtech/6.gif"/>
         <img class="gif" src="assets/tiredtech/6.gif"/>
       </div>
-      <p>Our actions hurt the earth. People might want/expect to see rage and wrath and fury. They will reject the radical notion that the universe was so kind. But in this story, the universe is kind, in the sense that reality continues moving forward, both punishment and compassion as per usual. <br>“I thought the earth remembered me, she took me back so tenderly” (Mary Oliver)</p>
+      <p style="margin-top: 0;">Our actions hurt the earth. People might want/expect to see rage and wrath and fury. They will reject the radical notion that the universe was so kind. But in this story, the universe is kind, in the sense that reality continues moving forward, both punishment and compassion as per usual. <i>“I thought the earth remembered me, she took me back so tenderly” (Mary Oliver)</i></p>
+      <p class="num">6/7</p>
     </div>
 
 
@@ -152,6 +201,7 @@
         <img class="gif" src="assets/tiredtech/7-2.jpg"/>
         <img class="gif" src="assets/tiredtech/7-3.jpg"/>
       </div>
+      <p class="num">7/7</p>
     </div>
     <!-- POPUPS -->
 
@@ -164,75 +214,84 @@
 
 
   <div class="container">
-    Extended Write Up Info:<br><br>
+    <p>Extended Write Up Info:<br><br>
     ‘The technology is tired’ is ultimately an interactive story (with the genre of ‘dystopian fable’) that showcases two sides: (1) a story following a character who’s learning what it means to coexist with the earth and moderate their technological progress, and (2) a harsh mechanical moderator who does not want you to see this plausible future.<br><br>
     This machine works by detecting if the viewer’s eyes are opened or closed. If the user’s eyes are open, the story stops and the moderator sternly tells you to close your eyes. If the user’s eyes are closed, the moderator is satisfied enough, and the play will continue. Servo motors open and close the stage curtains, move the rotating stage, and flip the stagefront, all timed to the audio track playing on a webfile which sends commands (via p5 serial control)  to the arduino in order to move the stage.<br><br>
-    I was inspired to create this project mainly because I wanted to push the limits of minimal user-interaction (in this case, it’s just opening and closing your eyes), yet still be able to have an immersive experience. I also wanted to explore a storytelling medium as it’s something I have very little experience in. Conceptually, I was inspired by two main essays: Ursula K. Le Guin’s ‘A rant about ‘technology’’ and Jacob Geller’s ‘The False Evolution of Execution Methods.’ While they both tackle radically different topics, their commentary meets in the middle: ultimately prompting us to think about trivial technological progression and our infatuation with the future.
+    I was inspired to create this project mainly because I wanted to push the limits of minimal user-interaction (in this case, it’s just opening and closing your eyes), yet still be able to have an immersive experience. I also wanted to explore a storytelling medium as it’s something I have very little experience in. Conceptually, I was inspired by two main essays: Ursula K. Le Guin’s ‘A rant about ‘technology’’ and Jacob Geller’s ‘The False Evolution of Execution Methods.’ While they both tackle radically different topics, their commentary meets in the middle: ultimately prompting us to think about trivial technological progression and our infatuation with the future.</p>
   </div>
 
   <div class="container">
-    <div>The script contains excerpts from following:<br><br>
-    Frederick Kiesler - Inside the Endless House
-    T.S. Eliot - Hollow Men
-    Mitski - A Burning Hill
-    Greta Thunberg - The Fairy Tale of Eternal Economic Growth
-    Mark Zuckerberg - Meta Connect 2023
-    Sophie from Mars - AI - Our Shiny New Robot King
-    Ursula K. Le Guin - Anthropocene: Arts of Living on a Damaged Planet
-    Mary Oliver - SLEEPING IN THE FOREST</div>
-    <div>Other notable references (not directly quoted):<br><br>
-      The False Evolution of Execution Methods
-      Art in the Pre-Apocalypse
-      The Backwards Law
-      A Prophet for Our Tech-Saturated Times
-      The Future of Well-Being in a Tech-Saturated World
-      A rant about “technology”
-      Places with terrible wifi
-      Things to Do in the Belly of the Whale
-      American SF and the Other
-      The Failure of the Science Fiction Novel as Social Criticism
-      Crowds and Technology
+    <div class="horiz">
+    <p>The script contains excerpts from following:<br><br>
+    Frederick Kiesler - Inside the Endless House<br>
+    T.S. Eliot - Hollow Men<br>
+    Mitski - A Burning Hill<br>
+    Greta Thunberg - The Fairy Tale of Eternal Economic Growth<br>
+    Mark Zuckerberg - Meta Connect 2023<br>
+    Sophie from Mars - AI - Our Shiny New Robot King<br>
+    Ursula K. Le Guin - Anthropocene: Arts of Living on a Damaged Planet<br>
+    Mary Oliver - SLEEPING IN THE FOREST</p>
+
+    <p>Other notable references (not directly quoted):<br><br>
+      The False Evolution of Execution Methods<br>
+      Art in the Pre-Apocalypse<br>
+      The Backwards Law<br>
+      A Prophet for Our Tech-Saturated Times<br>
+      The Future of Well-Being in a Tech-Saturated World<br>
+      A rant about “technology”<br>
+      Places with terrible wifi<br>
+      Things to Do in the Belly of the Whale<br>
+      American SF and the Other<br>
+      The Failure of the Science Fiction Novel as Social Criticism<br>
+      Crowds and Technology</p>
     </div>
   </div>
 
   <div class="container">
-    <p>A few quotes from these sources:</p>
-    <div>
+    <p><b>A few quotes from these sources:</b></p>
+    <div class="horiz">
       <p>“Technology” and “hi tech” are not synonymous, and a technology that isn’t “hi,” isn’t necessarily “low” in any meaningful sense. [...] <br><br> We have been so desensitized by a hundred and fifty years of ceaselessly expanding technical prowess that we think nothing less complex and showy than a computer or a jet bomber deserves to be called "technology " at all. As if linen were the same thing as flax — as if paper, ink, wheels, knives, clocks, chairs, aspirin pills, were natural objects, born with us like our teeth and fingers – as if steel saucepans with copper bottoms and fleece vests spun from recycled glass grew on trees, and we just picked them when they were ripe…<br><br>-Ursula K. Le Guin</p>
       <p>“We excuse the practices of today via the specter  of previous barbarism. [...] not only have we found a new solution, but the old solution was brutish, crash, inhumane. This new solution always represents a  new era,  the most evolved, the most enlightened. That is until, it too is rendered barbaric by the next developmental line.”<br><br>-Jacob Geller</p>
       <p>“In general, American [science fiction] has assumed a permanent hierarchy of superiors and inferiors, with rich, ambitious, aggressive males at the top, then a great gap, and then at the bottom the poor, the uneducated, the faceless masses, and all the women. The whole picture is, if I may say so, curiously "un-American." It is a perfect baboon patriarchy, with the Alpha Male on top, being respectfully groomed, from time to time, by his inferiors. [...]<br>Is this speculation? is this imagination? is this extrapolation? I call it brainless regressivism.”<br><br>-Ursula K. Le Guin</p>
+    </div>
+    <div class="horiz">
       <p>“Science fiction novels, on the record, have not been measurably effective social criticism [...] The science fiction novel does contain social criticism, explicit and implicit, but I believe this criticism is massively outweighed by unconscious symbolic material more concerned with the individual's relationship to his family and the raw universe than with the individual's relationship to society.<br><br>-C. M. Kornbluth</p>
       <p>“... In 1954 Ellul saw the beast emerging in infant form. Technology, he wrote, can’t put up with human values and ‘must necessarily don mathematical vestments. Everything in human life that does not lend itself to mathematical treatment must be excluded… Who is too blind to not see that a profound mutation is being advocated here?’”<br><br>-Jacques Ellul</p>
     </div>
   </div>
 
     <div class="container">
-      <p>Technology used:<br><br>
-      2 Continuous servos<br>
-      1 micro servo<br>
-      P5 Serial Control<br>
-      Media Pipe Face API<br>
-      Play.ht AI voice<br>
-      Garage Band<br><br>
-      Materials:<br><br>
-      Anything I could get my hands on
-      </p>
-    </div>
+      <p><b>Technical Aspects</b></p>
+      <div class="horiz">
+        <p>Technology used:<br><br>
+        2 Continuous servos<br>
+        1 micro servo<br>
+        P5 Serial Control<br>
+        Media Pipe Face API<br>
+        Play.ht AI voice<br>
+        Garage Band<br><br>
+        Materials:<br><br>
+        Anything I could get my hands on
+        </p>
 
-    <div class="container">
-      <p>
+        <p>
         As this is a prototype, moving forward future incorporations include: <br><br>
         - Hall monitor sensor and magnet for detecting the start of the rotating stage<br>
         - DC motors within the stage sets<br>
         - LEDs within the stage sets<br>
         - Spotlight, via an LED with a magnifier<br>
-        - Running the program on raspberry pi and USB webcam<br>
+        - Running program on raspi and USB webcam<br>
         - Hologram setup on top of the raspberry pi screen<br> 
-        - A fourth motor so the second stagefront ‘mouth’ closes from above<br>
-        - A chair with a haptic sensor for whenever the viewer opens their eyes<br>
+        - Fourth motor so the second stagefront ‘mouth’ closes<br>
+        - A chair w/ a haptic sensor<br>
         - A more revised script<br>
       </p>
+
+
+      </div>
+      
     </div>
+
 
     <div class="container">
       <p>Experience Simulation Video</p>
