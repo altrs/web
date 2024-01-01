@@ -20,7 +20,7 @@ for (let i = 0; i < imageIndexes.length; i++) {
     image.src = `assets/threedee/${imageIndex}.png`;
     const linkElement = document.createElement('a');
     linkElement.target = '_blank';
-    linkElement.href = 'https://youtu.be/k207HXfCz2s';
+    linkElement.href = 'port/seatrader.html';
     const imgWrapper = document.createElement('div');
     imgWrapper.appendChild(image);
     linkElement.appendChild(imgWrapper);
