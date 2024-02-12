@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5571FMTMPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5571FMTMPK');
+</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Selected Works</title>
+  <style>
+
+    body{
+      font-family: "Arial";
+      padding: 5%;
+      padding-left: 15%;
+      padding-right: 15%;
+      font-size: 1vw;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .title{
+      text-align: center;
+    }
+
+    .menu{
+      display: flex;
+      width: 100%;
+      border: 1px solid;
+      border-left: 1px transparent;
+      border-right: 1px transparent;
+      justify-content: space-between;
+    }
+
+    .menu p{
+      padding: 10px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .column {
+      flex: 1;
+      margin: 2%;
+    }
+
+    .box {
+      position: relative;
+      border: 1px solid;
+      margin-bottom: 20px;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .inner-box {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 13%;
+      text-align: justify;
+      border-top: 1px solid black;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-sizing: border-box; 
+    }
+
+    span {
+      width:100%;
+      height:1em;
+      display:inline-block;
+    }
+
+    .date{
+      position: absolute;
+      top: 0;
+      right: 5px;
+    }
+
+    .inner-title{
+      text-align: left;
+      position: absolute;
+      top: 25%;
+      left: 5px;
+      font-weight: 900;
+      font-size: 2vw;
+    }
+
+    .detail{
+      text-align: right;
+      position: absolute;
+      bottom: 12%;
+      right: 5px;
+    }
+
+    .title2{
+      position: absolute;
+      font-size: 1vw;
+      left: 5px;
+      top: 47%;
+      width: 70%;
+      font-weight: 100;
+    }
+
+    mark{
+      background-color: black;
+      color: white;
+    }
+
+    .weblink:hover{
+      background-color: yellow;
+    }
+
+     .imgs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .imgs img {
+      height: 200px;
+      margin: 10px;
+    }
+
+    .expanded-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .expanded-img img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .selected{
+      border: 1px dashed;
+    }
+
+    .selected:hover{
+      border: 1px solid;
+    }
+
+    @media only screen and (max-width: 768px) {
+      body {
+        padding: 5%;
+        padding-left: 0%;
+        padding-right: 0%;
+        font-size: 1.5vw;
+      }
+
+      .inner-title{
+        font-size: 3vw;
+      }
+
+      .title2{
+        top: 45%;
+        font-size: 1.5vw;
+      }
+
+      .box {
+        position: relative;
+        border: 1px solid;
+        margin-bottom: 20px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .imgs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .imgs img {
+        height: 100px;
+        margin: 15px;
+      }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        padding: 5%;
+        padding-left: 0%;
+        padding-right: 0%;
+        font-size: 1.5vw;
+      }
+
+      .inner-title{
+        font-size: 3vw;
+      }
+
+      .title2{
+        top: 45%;
+        font-size: 1.5vw;
+      }
+
+      .box {
+        position: relative;
+        border: 1px solid;
+        margin-bottom: 20px;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .imgs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .imgs img {
+        height: 80px;
+        margin: 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="title" onmouseenter="highlight()" onmouseleave="unhighlight()">
+    <h1 id="highlight-title"> ROBIN ALTMAN <br><i> SELECTED WORKS VISUAL PORTFOLIO </i> </h1>
+  </div>
+
+  <div class="menu" onmouseenter="unhighlight()">
+    <a href="https://www.altrs.wiki/"><p class="weblink" style="justify-content: left; text-align: left;">1.0 LINK TO MAIN SITE</p></a>
+    <a href="https://github.com/altrs"><p class="weblink" style="justify-content: right; text-align: right;">2.0 LINK TO GITHUB</p></a>
+  </div>
+
+  <div class="container">
+    <div class="column">
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="../assets/trad/7.png" onclick="expandImage(this)"/>
+          <img src="../assets/trad/8.png" onclick="expandImage(this)"/>
+          <img src="../assets/trad/16.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">MOCK BOOK COVERS | PHOTOSHOP<span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/port/jungle.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#698955', '#bed7e4')" style="background-color:#698955; color: #bed7e4; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">'JUNGLE' CHANPAN</p>
+          <p class="detail">CONTAINS 3 ENVIRONMENTS</p>
+        </div>
+        <div class="inner-box">VIRTUAL PRODUCTION + UNREAL ENGINE +  OSC<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="../assets/trad/1.png" onclick="expandImage(this)"/>
+          <img src="../assets/trad/5.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">TRADITIONAL | GRAPHITE / OIL PAINT<span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/port/online-games-nav.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#b893c7', '#0073c3')" style="background-color:#b893c7; color: #0073c3; border-color: black;">
+        <div class="box-text">
+          <p class="date">2020-2023</p>
+          <p class="inner-title">ONLINE GAMES</p>
+          <p class="title2">(BUGS GAME, BREAKOUT, I AM ALONE, ENVIROHYPNO, MIND’S EYE, ++)</p>
+          <p class="detail">CONTAINS 7 PROJECTS</p>
+        </div>
+        <div class="inner-box">JAVASCRIPT / JAVA<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="../assets/trad/2.png" onclick="expandImage(this)"/>
+          <img src="../assets/trad/12.png" onclick="expandImage(this)"/>
+          <img src="../assets/trad/15.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">DIGITAL COLLAGE : PHOTOSHOP / HAND DRAWING<span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/tired-tech.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#ea5e42', '#ffecb9')" style="background-color:#ea5e42; color: #ffecb9; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">The technology is tired</p>
+          <p class="detail">CONTAINS 1 PHYSICAL INTERACTION</p>
+        </div>
+        <div class="inner-box">JAVASCRIPT + COMPUTER VISION + ARDUINO<span></span></div>
+      </div>
+      </a>
+
+      <a href="../mindseye.html">
+      <div class="box selected">
+        <div class="imgs">
+          <img src="assets/me1.png" onclick="expandImage(this)"/>
+          <img src="assets/me2.gif" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">MIND'S EYE : PROJECT IMAGERY (LINKED)<span></span></div>
+      </div>
+    </a>
+
+      <a href="https://www.altrs.wiki/traditional.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#b2d0df', '#ea4f4f')" style="background-color:#b2d0df; color: #ea4f4f; border-color: black;">
+        <div class="box-text">
+          <p class="date">2019-2023</p>
+          <p class="inner-title">TRADITIONAL/2D</p>
+          <p class="detail">CONTAINS 12 PROJECTS</p>
+        </div>
+        <div class="inner-box">CONTE / PENCIL / PHOTOSHOP / ++<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="assets/freelance/6.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">LARGE SCALE MOSS WALL<span></span></div>
+      </div>
+
+      <a href="https://docs.google.com/document/d/1fqNKSJ-RknZv4Gxg2yLSJ8ZG56thL5ku2ytMR6zHCfc/edit?usp=sharing">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#575d24', '#52da62')" style="background-color:#575d24; color: #52da62; border-color: black;">
+        <div class="box-text">
+          <p class="date">2023</p>
+          <p class="inner-title">The Geography of CyberSpace</p>
+          <p class="detail">CONTAINS 1 RESEARCH PAPER</p>
+        </div>
+        <div class="inner-box">VIRTUAL PRODUCTION + UNREAL ENGINE +  OSC<span></span></div>
+      </div>
+      </a>
+
+    </div>
+
+    <div class="column">
+
+      <a href="https://www.altrs.wiki/limbs.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#0073ae', '#1d1d1d')" style="background-color:#0073ae; color: #1d1d1d; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022</p>
+          <p class="inner-title">A brain burst limbs</p>
+          <p class="detail">CONTAINS 1 PROJECT</p>
+        </div>
+        <div class="inner-box">ARDUINO + RASPI + PROCESSING<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="../assets/threedee/1.gif" onclick="expandImage(this)"/>
+          <img src="../assets/threedee/2.gif" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">ABSTRACT MOVEMENT | BLENDER<span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/port/digital-div-nav.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#282949', '#d07d33')" style="background-color:#282949; color: #d07d33; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022-2023</p>
+          <p class="inner-title">Digital Divination</p>
+          <p class="title2">(WEATHERWORK, SPELLWORK)</p>
+          <p class="detail">CONTAINS 2 PROJECTS</p>
+        </div>
+        <div class="inner-box">JAVASCRIPT + NODE.JS / APIs<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="assets/freelance/14.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">SCREENPRINTED DESIGN 'NEUROARENA' <span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/port/seatrader.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#db9898', '#6af1d6')" style="background-color:#db9898; color: #6af1d6; border-color: black;">
+        <div class="box-text">
+          <p class="date">2022</p>
+          <p class="inner-title">Seatrader</p>
+          <p class="detail">CONTAINS 1 PROJECT</p>
+        </div>
+        <div class="inner-box">UNITY + BLENDER<span></span></div>
+      </div>
+      </a>
+
+       <div class="box selected">
+        <div class="imgs">
+          <img src="assets/freelance/4.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">PAINTED \\ MURAL<span></span></div>
+      </div>
+
+      <a href="https://www.altrs.wiki/3d.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#1b39a7', '#a2cc8a')" style="background-color:#1b39a7; color: #a2cc8a; border-color: black;">
+        <div class="box-text">
+          <p class="date">2019-2023</p>
+          <p class="inner-title">3D WORK</p>
+          <p class="detail">CONTAINS 12 PROJECTS</p>
+        </div>
+        <div class="inner-box">BLENDER / PHOTOSHOP / PREMEIRE PRO<span></span></div>
+      </div>
+      </a>
+
+      <a href="https://altrs.github.io/bugs-game/index.html">
+      <div class="box selected">
+        <div class="imgs">
+          <img src="assets/b1.png" onclick="expandImage(this)"/>
+          <img src="assets/b2.png" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">BUGS GAME : PROJECT IMAGERY (LINKED)<span></span></div>
+      </div>
+    </a>
+
+      <a href="https://www.altrs.wiki/port/freelance.html">
+      <div class="box" onmouseenter="boxhighlight(this)" onmouseleave="boxunhighlight(this, '#402d2d', '#a1b823')" style="background-color:#402d2d; color: #a1b823; border-color: black;">
+        <div class="box-text">
+          <p class="date">2018-2023</p>
+          <p class="inner-title">Freelance Work</p>
+          <p class="detail">CONTAINS # PROJECTS</p>
+        </div>
+        <div class="inner-box">ADOBE / CHALK / PAINT / ++<span></span></div>
+      </div>
+      </a>
+
+      <div class="box selected">
+        <div class="imgs">
+          <img src="../assets/threedee/4.gif" onclick="expandImage(this)"/>
+        </div>
+        <div class="inner-box">LARGE SCALE MOSS WALL<span></span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    let title = document.getElementById('highlight-title');
+
+    function highlight (){
+      title.innerHTML = "<mark>ROBIN ALTMAN<br><i>SELECTED WORKS VISUAL PORTFOLIO</i></mark>";
+    }
+
+    function unhighlight (){
+     title.innerHTML = "ROBIN ALTMAN<br><i>SELECTED WORKS VISUAL PORTFOLIO</i>";
+    }
+
+    function boxhighlight(div){
+      div.style.backgroundColor = "white";
+      div.style.color = "black";
+    }
+
+    function boxunhighlight(div, c1, c2){
+      div.style.backgroundColor = c1;
+      div.style.color = c2;
+    }
+
+
+    function expandImage(img) {
+  // Create an expanded image element
+  var expandedImg = document.createElement('div');
+  var imgClone = img.cloneNode(true);
+  expandedImg.appendChild(imgClone);
+  expandedImg.classList.add('expanded-img');
+  
+  // Append the expanded image to the body
+  document.body.appendChild(expandedImg);
+  
+  // Add click event to remove expanded image when clicked
+  expandedImg.addEventListener('click', function() {
+    this.remove();
+  });
+}
+
+
+  </script>
+
+</body>
+</html>
