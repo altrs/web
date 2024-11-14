@@ -17,6 +17,47 @@ a{
   color: #1c1b1c;
 }
 
+h1{
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  animation: italicAni 2s ease-in-out infinite;
+}
+
+h1:hover{
+  font-weight: 600;
+}
+
+@keyframes spinWithDelay {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 0px;
+  }
+  70% {
+    transform: rotate(360deg);
+    border-radius: 50px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 0px;
+  }
+}
+
+@keyframes italicAni {
+  0% {
+    font-style: italic;
+    letter-spacing: auto;
+  }
+  50% {
+    font-style: italic;
+    letter-spacing: 5px;
+  }
+  100% {
+    font-style: italic;
+    letter-spacing: auto;
+  }
+}
+
 #back p{
   color: white;
 }
@@ -147,10 +188,12 @@ a{
 }
 
 #g3-3{
-  background: #6c8862;
+  background: #80aab3;
+  animation: spinWithDelay 4s ease-in-out infinite;
 }
 
 #g3-3:hover{
+  background: #325c4f;
   rotate: -20deg;
 }
 
