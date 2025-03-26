@@ -355,7 +355,7 @@ h1:hover{
 @media only screen and (max-width: 600px) {
     #gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(70px, 100px));
+      grid-template-columns: repeat(auto-fit, minmax(90px, 100px));
       grid-gap: 20px;
     }
     .galleryImg {
