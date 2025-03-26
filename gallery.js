@@ -1,7 +1,7 @@
 const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');
-const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const imageIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 let selectedIndex = null;
 
 for (let i = 0; i < imageIndexes.length; i++) {
@@ -30,6 +30,15 @@ for (let i = 0; i < imageIndexes.length; i++) {
     const linkElement = document.createElement('a');
     linkElement.target = '_blank';
     linkElement.href = 'https://www.altrs.wiki/port/jungle.html';
+    const imgWrapper = document.createElement('div');
+    imgWrapper.appendChild(image);
+    linkElement.appendChild(imgWrapper);
+    container.appendChild(linkElement);
+  } else if (imageIndex === 0) {
+    image.src = `assets/threedee/${imageIndex}.png`;
+    const linkElement = document.createElement('a');
+    linkElement.target = '_blank';
+    linkElement.href = 'https://drive.google.com/drive/folders/1UFwlNVvDbtYMa7SY-Lmoe7xFsalZLg3j?usp=sharing';
     const imgWrapper = document.createElement('div');
     imgWrapper.appendChild(image);
     linkElement.appendChild(imgWrapper);
