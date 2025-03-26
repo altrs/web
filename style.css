@@ -364,6 +364,9 @@ h1:hover{
       position: relative;
       cursor: pointer;
     }
+    #popup {
+      padding: 0px;
+    }
   }
 
 
